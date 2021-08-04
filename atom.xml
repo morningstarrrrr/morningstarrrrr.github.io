@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-04T11:09:32.094Z</updated>
+  <updated>2021-08-04T14:10:11.769Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://example.com/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2021-08-04T09:54:42.000Z</published>
-    <updated>2021-08-04T11:09:32.094Z</updated>
+    <updated>2021-08-04T14:10:11.769Z</updated>
     
-    <content type="html"><![CDATA[<center>数据结构</center><hr><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a><center>绪论</center></h2><h3 id="数据结构的研究内容"><a href="#数据结构的研究内容" class="headerlink" title="数据结构的研究内容"></a>数据结构的研究内容</h3><p>计算机解决问题的步骤：</p><ul><li>将问题抽象为<font color="red">数学模型</font></li><li>设计算法</li><li>编程、调试、运行</li></ul><p>早期，计算机应用于数值计算：</p><ul><li>分析问题，找出对象以及对象之间的关系</li><li>建立数学方程</li><li>求解</li></ul><p>随着计算机应用领域的扩展，越来越多被用于非数值计算：</p><ul><li>线性表</li><li>树</li><li>图</li></ul><p>以上都是“非数值计算”的程序设计问题</p><blockquote><p>综上所述，数据结构是一门研究<font color="red">非数值计算的</font>程序设计中计算机的<font color="red">操作对象</font>以及他们之间的<font color="red">关系</font>和<font color="red">操作</font>的学科。</p></blockquote><h3 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a>基本概念和术语</h3><h4 id="数据、数据元素、数据项和数据对象"><a href="#数据、数据元素、数据项和数据对象" class="headerlink" title="数据、数据元素、数据项和数据对象"></a>数据、数据元素、数据项和数据对象</h4><ol><li><p>数据(Data)：能输入计算机且能被计算机处理的各种符号的集合。</p><p>包括：</p></li></ol><ul><li>数值型数据：整数、实数等</li><li>非数值型数据：文字、图像、图形、声音等</li></ul><ol start="2"><li>数据元素(Data element)：数据元素是数据的基本单位，通常作为一个整体进行考虑和处理，也称为元素、记录、结点或顶点。</li><li>数据项：构成数据元素的不可分割的最小单位</li></ol><blockquote><p><font color="red">以上三者之间的关系：</font>数据&gt;数据元素&gt;数据项</p></blockquote><ol start="4"><li><p>数据对象(Data Object)：性质相同的数据元素的结合，是数据的一个子集。</p><p>数据元素和数据对象与数据的关系的区别：</p></li></ol><ul><li>数据元素是集合的个体</li><li>数据对象是集合的子集</li></ul><h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><ul><li><p>数据元素互相之间的关系称为<font color="red">结构</font></p></li><li><p>是指相互之间存在一种或多种特定关系的数据元素集合</p></li><li><p><font color="red">包含以下三方面内容：</font></p><ol><li>数据元素之间的逻辑关系，也称为<font color="red">逻辑结构</font></li><li>数据元素及其关系在计算机内存中的表示（又称为映像）称为数据的<font color="red">物理结构</font>或数据的<font color="red">存储结构</font></li><li>数据的<font color="red">运算和实现，</font>即对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现</li></ol></li><li><p>数据结构的两个层次：</p><ol><li><p><font color="red">逻辑结构</font></p></li><li><p><font color="red">物理结构（存储结构）</font></p><p>两者之间的关系：</p><ul><li>存储结构是逻辑关系的映像与元素本身的映像</li><li>逻辑结构是数据结构的抽象，存储结构是数据结构的实现</li><li>两者综合起来建立了数据元素之间的结构关系</li></ul></li></ol></li><li><p>逻辑结构的种类：</p><p>划分方法一：</p><ol><li><font color="red">线性结构：</font>有且仅有一个开始和终端结点，并且所有结点都最多只有一个直接前驱和一个直接后继。</li><li><font color="red">非线性结构：</font>一个结点可能有多个直接前驱和直接后继。</li></ol><p>划分方法二：</p><pre><code>1. &lt;font color=&quot;red&quot;&gt;集合结构：&lt;/font&gt;其中的数据元素只有&lt;font color=&quot;red&quot;&gt;只属于一个集合&lt;/font&gt;的关系 2. &lt;font color=&quot;red&quot;&gt;线性结构：&lt;/font&gt;数据元素存在&lt;font color=&quot;red&quot;&gt;一对一&lt;/font&gt;的线性关系 3. &lt;font color=&quot;red&quot;&gt;树形结构：&lt;/font&gt;数据元素存在&lt;font color=&quot;red&quot;&gt;一对多&lt;/font&gt;的线性关系 4. &lt;font color=&quot;red&quot;&gt;图状/网状结构：&lt;/font&gt;数据元素存在&lt;font color=&quot;red&quot;&gt;多对多&lt;/font&gt;的线性关系</code></pre></li><li><p>存储结构的种类：</p><p><font color="red">四种基本的存储结构：</font></p><p>1.<font color="red">顺序存储结构：</font>用一组连续的存储单元一次存储数据元素，数据元素之间的逻辑关系用存储位置表示</p><p>2.<font color="red">链式存储结构：</font>用一组任意的存储单元存储数据元素，数据元素之间的逻辑关系用指针来表示</p><p>3.<font color="red">索引存储结构：</font>在存储结点信息的同时，还建立附加的索引表（其中的每一项称为索引项）</p><p>4.<font color="red">散列存储结构：</font>根据结点的关键字直接计算出该结点的存储地址</p></li></ul><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
+    <content type="html"><![CDATA[<center>数据结构</center><hr><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a><center>绪论</center></h2><h3 id="数据结构的研究内容"><a href="#数据结构的研究内容" class="headerlink" title="数据结构的研究内容"></a>数据结构的研究内容</h3><p>计算机解决问题的步骤：</p><ul><li>将问题抽象为<font color="red">数学模型</font></li><li>设计算法</li><li>编程、调试、运行</li></ul><p>早期，计算机应用于数值计算：</p><ul><li>分析问题，找出对象以及对象之间的关系</li><li>建立数学方程</li><li>求解</li></ul><p>随着计算机应用领域的扩展，越来越多被用于非数值计算：</p><ul><li>线性表</li><li>树</li><li>图</li></ul><p>以上都是“非数值计算”的程序设计问题</p><blockquote><p>综上所述，数据结构是一门研究<font color="red">非数值计算的</font>程序设计中计算机的<font color="red">操作对象</font>以及他们之间的<font color="red">关系</font>和<font color="red">操作</font>的学科。</p></blockquote><h3 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a>基本概念和术语</h3><h4 id="数据、数据元素、数据项和数据对象"><a href="#数据、数据元素、数据项和数据对象" class="headerlink" title="数据、数据元素、数据项和数据对象"></a>数据、数据元素、数据项和数据对象</h4><ol><li><p>数据(Data)：能输入计算机且能被计算机处理的各种符号的集合。</p><p>包括：</p></li></ol><ul><li>数值型数据：整数、实数等</li><li>非数值型数据：文字、图像、图形、声音等</li></ul><ol start="2"><li>数据元素(Data element)：数据元素是数据的基本单位，通常作为一个整体进行考虑和处理，也称为元素、记录、结点或顶点。</li><li>数据项：构成数据元素的不可分割的最小单位</li></ol><blockquote><p><font color="red">以上三者之间的关系：</font>数据&gt;数据元素&gt;数据项</p></blockquote><ol start="4"><li><p>数据对象(Data Object)：性质相同的数据元素的结合，是数据的一个子集。</p><p>数据元素和数据对象与数据的关系的区别：</p></li></ol><ul><li>数据元素是集合的个体</li><li>数据对象是集合的子集</li></ul><h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><ul><li><p>数据元素互相之间的关系称为<font color="red">结构</font></p></li><li><p>是指相互之间存在一种或多种特定关系的数据元素集合</p></li><li><p><font color="red">包含以下三方面内容：</font></p><ol><li>数据元素之间的逻辑关系，也称为<font color="red">逻辑结构</font></li><li>数据元素及其关系在计算机内存中的表示（又称为映像）称为数据的<font color="red">物理结构</font>或数据的<font color="red">存储结构</font></li><li>数据的<font color="red">运算和实现，</font>即对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现</li></ol></li><li><p>数据结构的两个层次：</p><ol><li><p><font color="red">逻辑结构</font></p></li><li><p><font color="red">物理结构（存储结构）</font></p><p>两者之间的关系：</p><ul><li>存储结构是逻辑关系的映像与元素本身的映像</li><li>逻辑结构是数据结构的抽象，存储结构是数据结构的实现</li><li>两者综合起来建立了数据元素之间的结构关系</li></ul></li></ol></li><li><p>逻辑结构的种类：</p><p>划分方法一：</p><ol><li><font color="red">线性结构：</font>有且仅有一个开始和终端结点，并且所有结点都最多只有一个直接前驱和一个直接后继。</li><li><font color="red">非线性结构：</font>一个结点可能有多个直接前驱和直接后继。</li></ol><p>划分方法二：</p><pre><code>1. &lt;font color=&quot;red&quot;&gt;集合结构：&lt;/font&gt;其中的数据元素只有&lt;font color=&quot;red&quot;&gt;只属于一个集合&lt;/font&gt;的关系2. &lt;font color=&quot;red&quot;&gt;线性结构：&lt;/font&gt;数据元素存在&lt;font color=&quot;red&quot;&gt;一对一&lt;/font&gt;的线性关系3. &lt;font color=&quot;red&quot;&gt;树形结构：&lt;/font&gt;数据元素存在&lt;font color=&quot;red&quot;&gt;一对多&lt;/font&gt;的线性关系4. &lt;font color=&quot;red&quot;&gt;图状/网状结构：&lt;/font&gt;数据元素存在&lt;font color=&quot;red&quot;&gt;多对多&lt;/font&gt;的线性关系</code></pre></li><li><p>存储结构的种类：</p><p><font color="red">四种基本的存储结构：</font></p><p>1.<font color="red">顺序存储结构：</font>用一组连续的存储单元一次存储数据元素，数据元素之间的逻辑关系用存储位置表示</p><p>2.<font color="red">链式存储结构：</font>用一组任意的存储单元存储数据元素，数据元素之间的逻辑关系用指针来表示</p><p>3.<font color="red">索引存储结构：</font>在存储结点信息的同时，还建立附加的索引表（其中的每一项称为索引项）</p><p>4.<font color="red">散列存储结构：</font>根据结点的关键字直接计算出该结点的存储地址</p></li></ul><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
     
     
       
@@ -122,16 +122,29 @@
   </entry>
   
   <entry>
-    <title>singing2</title>
-    <link href="http://example.com/2021/08/02/singing1/"/>
-    <id>http://example.com/2021/08/02/singing1/</id>
+    <title>Everyday Routine</title>
+    <link href="http://example.com/2021/08/02/ER/"/>
+    <id>http://example.com/2021/08/02/ER/</id>
     <published>2021-08-02T05:39:47.000Z</published>
-    <updated>2021-08-04T01:49:48.997Z</updated>
+    <updated>2021-08-04T14:43:40.339Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p><strong>你想要什么：</strong></p><p>⛹️‍♂️健康的身体</p><p>📖多读书充实自己</p><p>🎵有兴趣爱好能够娱乐自己</p><p>🎁能赚到足够的钱能买自己想要的东西</p><p>🗄有充足的知识能够胜任自己感兴趣的工作</p></li><li><p><strong>想要成为什么样的人：</strong></p><p>平静，任何时候都不慌乱，理性面对一切事情</p><p>责任，不逃避要发生的事情</p><p>外向，关心他人，吸引他人</p></li><li><p><strong>要怎么做：</strong></p><p>摆脱拖延症</p><p>摆脱即时娱乐</p><p>不做没有意义的事情，即使要玩游戏也是和朋友一起玩</p><p>抽时间多读书</p><p>养成良好的作息习惯</p></li><li><p><strong>如果选择即时娱乐会怎么样：</strong></p><p>到毕业的时候，仍然做什么事情都半吊子，既没有做好考研的准备也没有做好工作的准备，仍然会时刻处于焦虑之中，自我怀疑</p></li><li><p>成功的道路并不像想象得那么拥挤，因为在人生的马拉松长路上，绝大部分人跑不到一半就主动退下来了。到后来，剩下的少数人不是嫌竞争对手太多，而是发愁怎样找一个同伴陪自己一同跑下去。因此，教育是一辈子的事情，笑到最后的人是一辈子接受教育的人。回过头来看，一些过去比我们读书更优秀，在起跑线上抢到了更好位置的人，早已放弃了人生的马拉松，我们能够跑得更远，仅仅是因为我们还在跑，如此而已。</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;你想要什么：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;⛹️‍♂️健康的身体&lt;/p&gt;
+&lt;p&gt;📖多读书充实自己&lt;/p&gt;
+&lt;p&gt;🎵有兴趣爱好能够娱乐自己&lt;/p&gt;
+&lt;p&gt;🎁能赚到足够的钱能买自己想要的东西&lt;/p&gt;
+&lt;p&gt;🗄有充足的知识能够胜任自己感</summary>
+      
     
     
     
-    
-    <category term="唱歌" scheme="http://example.com/categories/%E5%94%B1%E6%AD%8C/"/>
+    <category term="感悟" scheme="http://example.com/categories/%E6%84%9F%E6%82%9F/"/>
     
     
   </entry>
