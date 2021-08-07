@@ -7,14 +7,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://morningstarrrrr-blog-pic-1306711961.cos.ap-chengdu.myqcloud.com/DataStructure.png">
 <meta property="article:published_time" content="2021-08-04T09:54:42.000Z">
-<meta property="article:modified_time" content="2021-08-05T10:39:20.205Z">
+<meta property="article:modified_time" content="2021-08-07T02:30:55.007Z">
 <meta property="article:author" content="Young">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://morningstarrrrr-blog-pic-1306711961.cos.ap-chengdu.myqcloud.com/DataStructure.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: undefined,
   noticeOutdate: undefined,
   highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-08-05 18:39:20'
+  postUpdate: '2021-08-07 10:30:55'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -153,22 +153,22 @@
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Antique" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://morningstarrrrr-blog-pic-1306711961.cos.ap-chengdu.myqcloud.com/ava1.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="fa-fw fas fa-laptop"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%93%B2%E5%AD%A6/"><i class="fa-fw fas fa-bookmark"></i><span> 哲学</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%94%B1%E6%AD%8C/"><i class="fa-fw fas fa-music"></i><span> 唱歌</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB/"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%AF%AE%E7%90%83/"><i class="fa-fw fas fa-check"></i><span> 篮球</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%84%9F%E6%82%9F/"><i class="fa-fw fas fa-tree"></i><span> 感悟</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://morningstarrrrr-blog-pic-1306711961.cos.ap-chengdu.myqcloud.com/DataStructure.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Antique</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="fa-fw fas fa-laptop"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%93%B2%E5%AD%A6/"><i class="fa-fw fas fa-bookmark"></i><span> 哲学</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%94%B1%E6%AD%8C/"><i class="fa-fw fas fa-music"></i><span> 唱歌</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB/"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%AF%AE%E7%90%83/"><i class="fa-fw fas fa-check"></i><span> 篮球</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%84%9F%E6%82%9F/"><i class="fa-fw fas fa-tree"></i><span> 感悟</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-04T09:54:42.000Z" title="发表于 2021-08-04 17:54:42">2021-08-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-05T10:39:20.205Z" title="更新于 2021-08-05 18:39:20">2021-08-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><center>数据结构</center>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://morningstarrrrr-blog-pic-1306711961.cos.ap-chengdu.myqcloud.com/ava1.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="fa-fw fas fa-laptop"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%93%B2%E5%AD%A6/"><i class="fa-fw fas fa-bookmark"></i><span> 哲学</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%94%B1%E6%AD%8C/"><i class="fa-fw fas fa-music"></i><span> 唱歌</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB/"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%AF%AE%E7%90%83/"><i class="fa-fw fas fa-check"></i><span> 篮球</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%84%9F%E6%82%9F/"><i class="fa-fw fas fa-tree"></i><span> 感悟</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://morningstarrrrr-blog-pic-1306711961.cos.ap-chengdu.myqcloud.com/DataStructure.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Antique</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="fa-fw fas fa-laptop"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%93%B2%E5%AD%A6/"><i class="fa-fw fas fa-bookmark"></i><span> 哲学</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%94%B1%E6%AD%8C/"><i class="fa-fw fas fa-music"></i><span> 唱歌</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB/"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E7%AF%AE%E7%90%83/"><i class="fa-fw fas fa-check"></i><span> 篮球</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%84%9F%E6%82%9F/"><i class="fa-fw fas fa-tree"></i><span> 感悟</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-04T09:54:42.000Z" title="发表于 2021-08-04 17:54:42">2021-08-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-07T02:30:55.007Z" title="更新于 2021-08-07 10:30:55">2021-08-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><center>数据结构</center>
 
 <hr>
-<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a><center>绪论</center></h2><h3 id="🎈数据结构的研究内容"><a href="#🎈数据结构的研究内容" class="headerlink" title="🎈数据结构的研究内容"></a>🎈数据结构的研究内容</h3><p>计算机解决问题的步骤：</p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a><center>绪论</center></h2><h3 id="🎈数据结构的研究内容"><a href="#🎈数据结构的研究内容" class="headerlink" title="🎈数据结构的研究内容"></a>🎈数据结构的研究内容</h3><p><strong>计算机解决问题的步骤：</strong></p>
 <ul>
 <li>将问题抽象为<font color="red">数学模型</font></li>
 <li>设计算法</li>
 <li>编程、调试、运行</li>
 </ul>
-<p>早期，计算机应用于数值计算：</p>
+<p><strong>早期，计算机应用于数值计算：</strong></p>
 <ul>
 <li>分析问题，找出对象以及对象之间的关系</li>
 <li>建立数学方程</li>
 <li>求解</li>
 </ul>
-<p>随着计算机应用领域的扩展，越来越多被用于非数值计算：</p>
+<p><strong>随着计算机应用领域的扩展，越来越多被用于非数值计算：</strong></p>
 <ul>
 <li>线性表</li>
 <li>树</li>
@@ -249,44 +249,85 @@
 </ol>
 </li>
 </ul>
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>是指一组性质相同的值的集合及定义在此集合上的一些操作的总称</p>
-<p>在C语言中，按照取值的不同，可以分为两类：</p>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>数据类型(Data Type):是指一组性质相同的<font color="red">值的集合</font>及定义在此集合上的<font color="red">一组操作</font>的总称</p>
+<blockquote>
+<p>数据类型 = 值的集合 + 值集合上的一组操作</p>
+</blockquote>
+<p><strong>在C语言中，按照取值的不同，可以分为两类：</strong></p>
 <ul>
 <li>原子类型：是不可以再分解的基本类型，包括整型、实型、字符型等</li>
 <li>结构类型：有若干个类型集合而成，是可以再分解的。例如，整型数组是由若干整型数据组成的</li>
 </ul>
-<mark class="hl-label red">抽象是指抽取出事物具有的普遍性的本质。</mark> 
+<h4 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h4><mark class="hl-label red">抽象是指抽取出事物具有的普遍性的本质。</mark> 
 
-<h4 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h4><p>通过对已有的数据类型进行抽象得到。</p>
+<p>通过对已有的数据类型进行抽象得到。</p>
 <p>抽象数据类型（Abstract Data Type, ADT）：是指一个数学模型及定义在该模型上的一组操作。</p>
-<p>抽象数据类型体现了程序设计中问题分解、抽象和信息隐藏的特性。</p>
-<p>抽象数据类型的标准格式：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">Data</span><br><span class="line">	数据元素之间逻辑关系的定义</span><br><span class="line">Operation</span><br><span class="line">	操作1</span><br><span class="line">		初始条件</span><br><span class="line">		操作结果描述</span><br><span class="line">	操作2</span><br><span class="line">		...</span><br><span class="line">	操作n</span><br><span class="line">		...</span><br><span class="line">		</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+<ul>
+<li>由用户定义，从问题中抽象出<font color="red">数据模型</font>（逻辑结构）。</li>
+<li>还包括定义在数据模型上的一组<font color="red">抽象运算</font>（相关操作）。</li>
+</ul>
+<p><strong>抽象数据类型的形式定义：</strong></p>
+<p>抽象数据类型可以用（D，S，P）<font color="red">三元组</font>表示。</p>
+<p>其中：D是数据对象；</p>
+<p>​            S是D上的关系集；</p>
+<p>​            P是对D的基本操作集。</p>
+<p><strong>抽象数据类型的定义格式如下：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">&#123;</span><br><span class="line">	数据对象：&lt;数据对象的定义&gt;		<span class="comment">//其中，数据对象和数据关系用伪代码描述</span></span><br><span class="line">	数据关系：&lt;数据关系的定义&gt;		<span class="comment">//基本操作的定义格式为：</span></span><br><span class="line">	基本操作：&lt;基本操作的定义&gt;		<span class="comment">// 基本操作名（参数表）</span></span><br><span class="line">&#125;ADT 抽象数据类型名			   <span class="comment">// 初始条件：&lt;初始条件描述&gt;</span></span><br><span class="line">    							<span class="comment">// 操作结果：&lt;操作结果描述&gt;                     </span></span><br></pre></td></tr></table></figure>
 
 <hr>
+<p><strong>基本操作</strong>定义格式说明：</p>
+<p>参数表：赋值参数 只为操作提供输入值</p>
+<p>​                引用参数 以&amp;打头，除可提供输入值外，还将返回操作结果</p>
+<p>初始条件：描述操作执行之前数据结构和参数应满足的条件，若不满足，则操作失败，并返回相应出错信息。若初始条件为空，则省略之。</p>
+<p>操作结果：说明操作正常完成之后，数据结构的变化状况和应返回的结果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">Data</span><br><span class="line">	数据对象的定义</span><br><span class="line">	数据元素之间逻辑关系的定义</span><br><span class="line">Operation</span><br><span class="line">	操作1</span><br><span class="line">		初始条件</span><br><span class="line">		操作结果描述</span><br><span class="line">	操作2</span><br><span class="line">		...</span><br><span class="line">	操作n</span><br><span class="line">		...</span><br><span class="line">		</span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a><center>算法</center></h2><p><strong>数据额结构和算法的关系是相互依赖不可分割的。</strong></p>
-<h3 id="🎈算法定义"><a href="#🎈算法定义" class="headerlink" title="🎈算法定义"></a>🎈算法定义</h3><p>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且每条指令表示一个或多个操作。</p>
+<h3 id="🎈算法定义"><a href="#🎈算法定义" class="headerlink" title="🎈算法定义"></a>🎈算法定义</h3><p>算法是解决特定问题<strong>求解方法和步骤</strong>的描述，在计算机中表现为<font color="red">指令</font>的有限<font color="red">序列</font>，并且每条指令表示一个或多个操作。</p>
+<p><strong>算法的描述：</strong></p>
+<ul>
+<li>自然语言：中文、英语</li>
+<li>流程图</li>
+<li>伪代码</li>
+<li>程序代码</li>
+</ul>
+<p><strong>算法与程序：</strong></p>
+<p><strong>算法</strong>是解决问题的一种方法或一个过程，考虑如何将输入转换成输出，一个问题可以有多种算法</p>
+<p><strong>程序</strong>是用某种程序设计语言对算法的具体实现</p>
+<blockquote>
+<p>程序 = 数据结构 + 算法</p>
+</blockquote>
 <h3 id="🎈算法的特性"><a href="#🎈算法的特性" class="headerlink" title="🎈算法的特性"></a>🎈算法的特性</h3><h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><ul>
 <li>算法具有零个或多个输入</li>
-<li>算法至少有一个或多个输出，输出的形式可以是打印输出，也可以是返回一个或多个值等</li>
+<li>算法至少有一个或多个输出</li>
 </ul>
-<h4 id="有穷性"><a href="#有穷性" class="headerlink" title="有穷性"></a>有穷性</h4><p>算法在执行有限的步骤之后，自动结束而会出现无限循环，并且每一个步骤在可接受的时间内完成。</p>
-<h4 id="确定性"><a href="#确定性" class="headerlink" title="确定性"></a>确定性</h4><p>算法的每一步骤都具有确定的含义，不会出现二义性。</p>
-<h4 id="可行性"><a href="#可行性" class="headerlink" title="可行性"></a>可行性</h4><p>算法的每一步都必须是可行的，也就是说，每一步都能通过执行有限次数完成。</p>
+<h4 id="有穷性"><a href="#有穷性" class="headerlink" title="有穷性"></a>有穷性</h4><p>算法在执行有穷步之后结束，并且每一个步骤在有穷的时间内完成。</p>
+<h4 id="确定性"><a href="#确定性" class="headerlink" title="确定性"></a>确定性</h4><p>算法的每一步骤都具有确定的含义，不会出现二义性，任何条件下只有唯一的一条执行路径，即对于相同的输入只能得到相同的输出。</p>
+<h4 id="可行性"><a href="#可行性" class="headerlink" title="可行性"></a>可行性</h4><p>算法是可执行的，算法描述的操作可以通过已经实现的基本操作执行有限次来实现。</p>
 <h3 id="🎈算法设计的要求"><a href="#🎈算法设计的要求" class="headerlink" title="🎈算法设计的要求"></a>🎈算法设计的要求</h3><h4 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h4><p>算法的正确性是指算法至少应该具有输入、输出和加工处理无歧义性、能正确反映问题的需求、能够得到问题的正确答案。</p>
 <p>可以分为四个层次：</p>
 <ol>
-<li>算法程序没有语法错误</li>
-<li>算法程序对于合法的输入数据能够产生满足要求的输出结果。</li>
-<li>算法程序对于非法的输入数据能够得出满足规格说明的结果。</li>
-<li>算法程序对于精心选择的，甚至刁难的测试数据都有满足要求的输出结果。</li>
+<li>算法程序<font color="red">不含语法错误</font></li>
+<li>算法程序对于<font color="red">几组输入数据</font>能够产生满足要求的输出结果。</li>
+<li>算法程序对于<font color="red">精心选择的、典型、苛刻且带有刁难性的</font>几组输入数据能够得出满足要求的结果。</li>
+<li>算法程序对于<font color="red">一切合法的输入数据</font>都有满足要求的输出结果。</li>
 </ol>
-<p>一般情况下，把层次3作为一个算法是否正确的标准。同时，一个好的算法还要容易理解。</p>
-<h4 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h4><p>算法设计的另一目的是为了便于阅读、理解和交流。</p>
-<h4 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h4><p>当数据输入不合法时，算法也能做出相关处理，而不是产生异常或莫名奇妙的结果。</p>
+<p>一般情况下，把<font color="red">第三层</font>作为衡量一个算法是否合格的标准。同时，一个好的算法还要容易理解。</p>
+<h4 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h4><p>算法设计的另一目的是为了便于阅读、理解和交流。隐晦难读的算法易于隐藏较多错误难以调试</p>
+<h4 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h4><ul>
+<li>当<font color="red">输入非法数据</font>时，算法也能恰当做出反应和处理，而不是产生异常或莫名奇妙的结果。</li>
+<li>处理出错的方法，不应该是中断程序的执行，而应返回一个表示错误或错误属性的值，以便在更高的抽象层次上进行处理。</li>
+</ul>
 <h4 id="时间效率高和存储量低"><a href="#时间效率高和存储量低" class="headerlink" title="时间效率高和存储量低"></a>时间效率高和存储量低</h4><p>设计算法应该尽量满足时间效率高和存储量低的需求。</p>
-<h3 id="🎈算法效率的度量方法"><a href="#🎈算法效率的度量方法" class="headerlink" title="🎈算法效率的度量方法"></a>🎈算法效率的度量方法</h3><h4 id="事后统计方法"><a href="#事后统计方法" class="headerlink" title="事后统计方法"></a>事后统计方法</h4><p>这种方式主要是通过设计好的测试程序和数据，利用计算机计时器对不同算法编制的程序的运行时间进行比较，从而确定算法效率的高低。但是存在缺陷，不予采纳。</p>
-<h4 id="事前分析估算方法"><a href="#事前分析估算方法" class="headerlink" title="事前分析估算方法"></a>事前分析估算方法</h4><p>在计算机程序编制前，依据统计方法对算法进行估算。</p>
+<h3 id="🎈算法效率的度量方法"><a href="#🎈算法效率的度量方法" class="headerlink" title="🎈算法效率的度量方法"></a>🎈算法效率的度量方法</h3><p><strong>算法效率从以下两个方面来考虑：</strong></p>
+<p><font color="red">1.时间效率： </font>指的是算法所耗费的时间</p>
+<p><font color="red">2.空间效率：</font>指的是算法执行过程中所耗费的存储空间</p>
+<p><strong>时间效率和空间效率有时候是矛盾的</strong></p>
+<h4 id="事后统计方法"><a href="#事后统计方法" class="headerlink" title="事后统计方法"></a>事后统计方法</h4><p>将算法实现，测试其时间和空间开销。缺陷：编写程序耗费较多的时间和精力；所得实验结果依赖于计算机的软硬件等环境因素，掩盖算法本身的优劣。</p>
+<h4 id="事前分析估算方法"><a href="#事前分析估算方法" class="headerlink" title="事前分析估算方法"></a>事前分析估算方法</h4><p><strong><font color="red">算法运行时间指算法中每条语句的频度之和（假设每条语句时间为单位时间）</font></strong></p>
+<p>在计算机程序编制前，依据统计方法对算法进行估算。</p>
 <p>程序在计算机上运行时所消耗的时间取决于下列因素：</p>
 <ol>
 <li>算法采用的策略、方法</li>
@@ -303,10 +344,16 @@
 </blockquote>
 <p>结论：判断一个算法的效率时，函数中的常数和其他次要项常常可以忽略，而更应该关注主项（最高阶项）的阶数。</p>
 <h3 id="🎈算法时间复杂度"><a href="#🎈算法时间复杂度" class="headerlink" title="🎈算法时间复杂度"></a>🎈算法时间复杂度</h3><h4 id="算法时间复杂度定义"><a href="#算法时间复杂度定义" class="headerlink" title="算法时间复杂度定义"></a>算法时间复杂度定义</h4><blockquote>
-<p>在进行算法分析时，语句总的执行次数T（n）是关于问题规模n的函数，进而分析T（n）随n的变化情况并确定T（n）的数量级。算法的时间复杂度，也就是算法的时间量度，记作 T(n)=O(f(n)) 。它表示随问题规模n的增大，算法执行时间的增长率和f（n）的增长率相同，称作算法的渐近时间复杂度，简称为时间复杂度。其中f（n）是问题规模n的某个函数。</p>
+<p>在进行算法分析时，语句总的执行次数T（n）是关于问题规模n的函数，进而分析T（n）随n的变化情况并确定T（n）的数量级。算法的时间复杂度，也就是算法的时间量度，记作 T(n)=O(f(n)) 。它表示随问题规模n的增大，算法执行时间的增长率和f（n）的增长率相同，称作<font color="red"><strong>渐进时间复杂度</strong></font>，简称为时间复杂度。一般情况下，不必计算所有操作的 执行次数，而只考虑算法中<strong>基本操作</strong>执行的次数，它是问题规模n的某个函数，用T（n）表示。</p>
 </blockquote>
 <p>这样用大写 O() 来体现算法时间复杂度的记法，称之为大O记法。</p>
 <p>一般情况下，随着n的增大，T（n）增长最慢的算法为最优算法。</p>
+<p><strong>分析算法时间复杂度的基本方法：</strong></p>
+<ol>
+<li>找出<font color="red">语句频度最大</font>的那条语句作为<font color="red">基本语句</font></li>
+<li>计算<font color="red">基本语句</font>的频度得到问题规模n的某个函数f（n）</li>
+<li>取其数量级用符号“O”表示</li>
+</ol>
 <h4 id="推导大O阶方法"><a href="#推导大O阶方法" class="headerlink" title="推导大O阶方法"></a>推导大O阶方法</h4><ol>
 <li>用常数1取代运行时间中的所有加法常数。</li>
 <li>在修改后的运行次数函数中，只保留最高阶项</li>
@@ -335,6 +382,14 @@
 <center>n+(n-1)+(n-2)+···+1=n(n+1)/2+n/2</center>
 
 <p>用推导大O阶的方法，得出这段代码的时间复杂度为O（n<sup>2</sup>）。</p>
+<h4 id="算法的加法法则和乘法法则"><a href="#算法的加法法则和乘法法则" class="headerlink" title="算法的加法法则和乘法法则"></a>算法的加法法则和乘法法则</h4><ul>
+<li><p>加法法则</p>
+<p>T(n) = T1(n) + T2(n) = O(f(n)) + O(g(n)) = O( max ( f(n) , g(n) ) )</p>
+</li>
+<li><p>乘法法则</p>
+<p>T(n) = T1(n) * T2(n) = O(f(n)) + O(g(n)) = O( f(n) * g(n) )</p>
+</li>
+</ul>
 <h4 id="🎈常用的时间复杂度"><a href="#🎈常用的时间复杂度" class="headerlink" title="🎈常用的时间复杂度"></a>🎈常用的时间复杂度</h4><table>
 <thead>
 <tr>
@@ -360,12 +415,12 @@
 </tr>
 <tr>
 <td align="center">5log<sub>2</sub>n+20</td>
-<td align="center">O（logn）</td>
+<td align="center">O（log<sub>2</sub>n）</td>
 <td align="center">对数阶</td>
 </tr>
 <tr>
 <td align="center">2n+3nlog<sub>2</sub>n+19</td>
-<td align="center">O（nlogn）</td>
+<td align="center">O（nlog<sub>2</sub>n）</td>
 <td align="center">nlog<sub>2</sub>n阶</td>
 </tr>
 <tr>
@@ -381,12 +436,32 @@
 </tbody></table>
 <p>常用的时间复杂度所耗费的时间从小到大依次是：</p>
 <blockquote>
-<p>O（1）&lt;O（logn）&lt;O（nlogn）&lt;O（n<sup>2</sup>）&lt;O（n<sup>3</sup>）&lt;O（2<sup>n</sup>）&lt;O（n！）&lt;O（n<sup>n</sup>）</p>
+<p>O（1）&lt;O（log<sub>2</sub>n）&lt; O（n）&lt;O（nlog<sub>2</sub>n）&lt;O（n<sup>2</sup>）&lt;O（n<sup>3</sup>）&lt;O（2<sup>n</sup>）&lt;O（n！）&lt;O（n<sup>n</sup>）</p>
 </blockquote>
 <h3 id="🎈最坏情况与平均情况"><a href="#🎈最坏情况与平均情况" class="headerlink" title="🎈最坏情况与平均情况"></a>🎈最坏情况与平均情况</h3><ul>
 <li><strong>最坏情况运行时间是一种保证，那就是运行时间将不会再坏了。在应用中，这是一种最重要的需求，通常，除非特别指定，我们提到的运行时间都是最坏情况的运行时间。</strong></li>
 <li>平均运行时间是所有情况中最有意义的，因为它是期望的运行时间。（一般通过运行一定数量的实验数据后估算出来的）</li>
 </ul>
 <h3 id="🎈算法空间复杂度"><a href="#🎈算法空间复杂度" class="headerlink" title="🎈算法空间复杂度"></a>🎈算法空间复杂度</h3><p>算法的空间复杂度通过计算算法所需的存储空间实现，算法空间复杂度的计算公式记作： S(n) = O(f(n)) ，其中，n为问题的规模，f（n）为语句关于n所占存储空间的函数。</p>
+<p><strong>算法要占据的空间：</strong></p>
+<ul>
+<li>算法本身要占据的空间，输入/输出，指令，常数，变量等</li>
+<li>算法要使用<font color="red">辅助空间</font></li>
+</ul>
 <hr>
-<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><center>线性表</center></h2><h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9"><span class="toc-text">🎈数据结构的研究内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD"><span class="toc-text">🎈基本概念和术语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E3%80%81%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%E3%80%81%E6%95%B0%E6%8D%AE%E9%A1%B9%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1"><span class="toc-text">数据、数据元素、数据项和数据对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">抽象数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-text">算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89"><span class="toc-text">🎈算法定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">🎈算法的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-text">输入输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%A9%B7%E6%80%A7"><span class="toc-text">有穷性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E6%80%A7"><span class="toc-text">确定性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="toc-text">可行性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%A6%81%E6%B1%82"><span class="toc-text">🎈算法设计的要求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E7%A1%AE%E6%80%A7"><span class="toc-text">正确性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E8%AF%BB%E6%80%A7"><span class="toc-text">可读性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%A5%E5%A3%AE%E6%80%A7"><span class="toc-text">健壮性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E9%AB%98%E5%92%8C%E5%AD%98%E5%82%A8%E9%87%8F%E4%BD%8E"><span class="toc-text">时间效率高和存储量低</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F%E6%96%B9%E6%B3%95"><span class="toc-text">🎈算法效率的度量方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%90%8E%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-text">事后统计方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%89%8D%E5%88%86%E6%9E%90%E4%BC%B0%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-text">事前分析估算方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E5%87%BD%E6%95%B0%E7%9A%84%E6%B8%90%E8%BF%91%E5%A2%9E%E9%95%BF"><span class="toc-text">🎈函数的渐近增长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">🎈算法时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%AE%9A%E4%B9%89"><span class="toc-text">算法时间复杂度定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC%E5%A4%A7O%E9%98%B6%E6%96%B9%E6%B3%95"><span class="toc-text">推导大O阶方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E6%95%B0%E9%98%B6"><span class="toc-text">常数阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E9%98%B6"><span class="toc-text">线性阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6"><span class="toc-text">对数阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E6%96%B9%E9%98%B6"><span class="toc-text">平方阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%8E%88%E5%B8%B8%E7%94%A8%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">🎈常用的时间复杂度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5%E4%B8%8E%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5"><span class="toc-text">🎈最坏情况与平均情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">🎈算法空间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="toc-text">线性表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="toc-text">第四章</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Young</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><center>线性表</center></h2><h3 id="🎵线性表的定义和特点"><a href="#🎵线性表的定义和特点" class="headerlink" title="🎵线性表的定义和特点"></a>🎵线性表的定义和特点</h3><p><strong>线性表(Linear List):</strong></p>
+<ul>
+<li>由n个数据元素（结点）组成的<font color="red">有限序列</font></li>
+<li>其中数据元素的个数n定义为表的长度</li>
+<li>当n=0时称为空表</li>
+<li>数据元素ai只是一个抽象的符号，其具体含义在不同的情况下可以不同</li>
+</ul>
+<p><font color="red">同一线性表中的元素必定具有相同特征，数据元素间的关系是线性关系</font></p>
+<p><strong>线性表的逻辑特征是：</strong></p>
+<ol>
+<li>非空的线性表有且只有一个开始结点，它没有直接前驱，而且仅有一个直接后继</li>
+<li>有且只有一个终端结点，它没有直接后继，而仅有一个直接前驱</li>
+<li>其余的内部结点有且只有一个直接前驱和一个直接后继</li>
+</ol>
+<p><font color="red">线性表是一种典型的线性结构</font></p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">🎈数据结构的研究内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.2.</span> <span class="toc-text">🎈基本概念和术语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E3%80%81%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%E3%80%81%E6%95%B0%E6%8D%AE%E9%A1%B9%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.2.1.</span> <span class="toc-text">数据、数据元素、数据项和数据对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.2.</span> <span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.4.</span> <span class="toc-text">抽象数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.</span> <span class="toc-text">🎈算法定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">🎈算法的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">2.2.1.</span> <span class="toc-text">输入输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%A9%B7%E6%80%A7"><span class="toc-number">2.2.2.</span> <span class="toc-text">有穷性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E6%80%A7"><span class="toc-number">2.2.3.</span> <span class="toc-text">确定性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="toc-number">2.2.4.</span> <span class="toc-text">可行性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%A6%81%E6%B1%82"><span class="toc-number">2.3.</span> <span class="toc-text">🎈算法设计的要求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E7%A1%AE%E6%80%A7"><span class="toc-number">2.3.1.</span> <span class="toc-text">正确性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E8%AF%BB%E6%80%A7"><span class="toc-number">2.3.2.</span> <span class="toc-text">可读性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%A5%E5%A3%AE%E6%80%A7"><span class="toc-number">2.3.3.</span> <span class="toc-text">健壮性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%95%88%E7%8E%87%E9%AB%98%E5%92%8C%E5%AD%98%E5%82%A8%E9%87%8F%E4%BD%8E"><span class="toc-number">2.3.4.</span> <span class="toc-text">时间效率高和存储量低</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">🎈算法效率的度量方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%90%8E%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.1.</span> <span class="toc-text">事后统计方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%89%8D%E5%88%86%E6%9E%90%E4%BC%B0%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.2.</span> <span class="toc-text">事前分析估算方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E5%87%BD%E6%95%B0%E7%9A%84%E6%B8%90%E8%BF%91%E5%A2%9E%E9%95%BF"><span class="toc-number">2.5.</span> <span class="toc-text">🎈函数的渐近增长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.6.</span> <span class="toc-text">🎈算法时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%AE%9A%E4%B9%89"><span class="toc-number">2.6.1.</span> <span class="toc-text">算法时间复杂度定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC%E5%A4%A7O%E9%98%B6%E6%96%B9%E6%B3%95"><span class="toc-number">2.6.2.</span> <span class="toc-text">推导大O阶方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E6%95%B0%E9%98%B6"><span class="toc-number">2.6.3.</span> <span class="toc-text">常数阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E9%98%B6"><span class="toc-number">2.6.4.</span> <span class="toc-text">线性阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6"><span class="toc-number">2.6.5.</span> <span class="toc-text">对数阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E6%96%B9%E9%98%B6"><span class="toc-number">2.6.6.</span> <span class="toc-text">平方阶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E5%8A%A0%E6%B3%95%E6%B3%95%E5%88%99%E5%92%8C%E4%B9%98%E6%B3%95%E6%B3%95%E5%88%99"><span class="toc-number">2.6.7.</span> <span class="toc-text">算法的加法法则和乘法法则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%8E%88%E5%B8%B8%E7%94%A8%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.6.8.</span> <span class="toc-text">🎈常用的时间复杂度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5%E4%B8%8E%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5"><span class="toc-number">2.7.</span> <span class="toc-text">🎈最坏情况与平均情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%88%E7%AE%97%E6%B3%95%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.8.</span> <span class="toc-text">🎈算法空间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">线性表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%B5%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E7%89%B9%E7%82%B9"><span class="toc-number">3.1.</span> <span class="toc-text">🎵线性表的定义和特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="toc-number">4.</span> <span class="toc-text">第四章</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Young</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
