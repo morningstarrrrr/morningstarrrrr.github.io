@@ -1,671 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Everyday Routine</title>
-    <url>/2021/08/02/ER/</url>
-    <content><![CDATA[<ul>
-<li><p><strong>你想要什么：</strong></p>
-<p>⛹️‍♂️健康的身体</p>
-<p>📖多读书充实自己</p>
-<p>🎵有兴趣爱好能够娱乐自己</p>
-<p>🎁能赚到足够的钱能买自己想要的东西</p>
-<p>🗄有充足的知识能够胜任自己感兴趣的工作</p>
-</li>
-<li><p><strong>想要成为什么样的人：</strong></p>
-<p>平静，任何时候都不慌乱，理性面对一切事情</p>
-<p>责任，不逃避要发生的事情</p>
-<p>外向，关心他人，吸引他人</p>
-</li>
-<li><p><strong>要怎么做：</strong></p>
-<p>摆脱拖延症</p>
-<p>摆脱即时娱乐</p>
-<p>不做没有意义的事情，即使要玩游戏也是和朋友一起玩</p>
-<p>抽时间多读书</p>
-<p>养成良好的作息习惯</p>
-</li>
-<li><p><strong>如果选择即时娱乐会怎么样：</strong></p>
-<p>到毕业的时候，仍然做什么事情都半吊子，既没有做好考研的准备也没有做好工作的准备，仍然会时刻处于焦虑之中，自我怀疑</p>
-</li>
-<li><p>成功的道路并不像想象得那么拥挤，因为在人生的马拉松长路上，绝大部分人跑不到一半就主动退下来了。到后来，剩下的少数人不是嫌竞争对手太多，而是发愁怎样找一个同伴陪自己一同跑下去。因此，教育是一辈子的事情，笑到最后的人是一辈子接受教育的人。回过头来看，一些过去比我们读书更优秀，在起跑线上抢到了更好位置的人，早已放弃了人生的马拉松，我们能够跑得更远，仅仅是因为我们还在跑，如此而已。</p>
-</li>
-</ul>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>C++by黑马</title>
+      <link href="/2021/08/06/c-by%E9%BB%91%E9%A9%AC/"/>
+      <url>/2021/08/06/c-by%E9%BB%91%E9%A9%AC/</url>
+      
+        <content type="html"><![CDATA[<h2 id="C-基础入门"><a href="#C-基础入门" class="headerlink" title="C++基础入门"></a>C++基础入门</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>作用：用于记录程序中不可更改的数据</p><p>C++中定义常量两种方式：</p><ol><li><p>#define 宏常量    <code>define 常量名 常量值</code></p><p><strong>通常在文件上方定义</strong>，表示一个常量</p></li><li><p>const 修饰的变量 <code>const 数据类型 常量名 = 常量值</code></p><p><strong>通常在变量定义前加上关键字const</strong>，修饰该变量为常量，不可修改</p></li></ol><h3 id="sizeof关键字"><a href="#sizeof关键字" class="headerlink" title="sizeof关键字"></a>sizeof关键字</h3><p>作用：统计数据类型所占内存的大小</p><p>语法：<code>sizeof( 数据类型 / 变量 )</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sizeof</span>（<span class="keyword">short</span>）</span><br></pre></td></tr></table></figure><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><p>作用：表示小数</p><ol><li>单精度float</li></ol><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f1 = <span class="number">3.14f</span>;   <span class="comment">//在使用的时候在数字后面加上一个f</span></span><br></pre></td></tr></table></figure><ol start="2"><li>双精度double</li></ol><p>两者的<strong>区别</strong>在于表示的有效数字范围不同</p><table><thead><tr><th>数据类型</th><th>占用空间</th><th>有效数字范围</th></tr></thead><tbody><tr><td>float</td><td>4字节</td><td>7位有效数字</td></tr><tr><td>double</td><td>8字节</td><td>15~16位有效数字</td></tr></tbody></table><p>有效数字：第一个不为零的数字开始往后数，同时最后一位要四舍五入。</p><p><strong>默认情况下，输出一个小数，会显示6位有效数字</strong></p><ul><li>科学计数法</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f2 = <span class="number">3e2</span>;   <span class="comment">//3*10^2</span></span><br><span class="line"><span class="keyword">float</span> f3 = <span class="number">3e-2</span>;  <span class="comment">//3*(0.1)^2</span></span><br></pre></td></tr></table></figure><h4 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h4><p>作用：显示单个字符</p><p>语法：<code>char ch = &#39;a&#39;</code></p><ul><li>用单引号括起来，不用双引号</li><li>单引号内只能有一个字符，不能是字符串</li><li>字符型变量只占用一个字节</li><li>字符型变量是将字符对应的ASCII码放到存储单元中存储</li></ul><p>‘A’的ASCII码：65         </p><p>‘a’的ASCII码：97</p><h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>换行：<code>\n</code></p><p>反斜杠：<code>\\</code></p><p>水平制表符：<code>\t</code>   作用：在输出的时候可以让代码对齐</p><h4 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a>字符串型</h4><p>作用：用于表示一串字符</p><ol><li>C风格字符串：<code>char 变量名[] = &quot;字符串值&quot;</code></li></ol><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str1[] = <span class="string">&quot;hello world&quot;</span>;</span><br></pre></td></tr></table></figure><ol start="2"><li>C++风格字符串：<code>string 变量名 = &quot;字符串值&quot;</code></li></ol><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span>  <span class="comment">//在C++风格字符串的时候，要包含这个文件</span></span></span><br><span class="line"></span><br><span class="line">string str2 = <span class="string">&quot;Hello World&quot;</span></span><br></pre></td></tr></table></figure><h4 id="布尔类型bool"><a href="#布尔类型bool" class="headerlink" title="布尔类型bool"></a>布尔类型bool</h4><p>作用：布尔数据类型代表真或假的值</p><p>bool类型只有两个值：</p><ul><li>true ：真（本质是1）</li><li>false：假（本质是0）</li></ul><p><strong>bool类型只占用1个字节大小</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="取模运算"><a href="#取模运算" class="headerlink" title="取模运算"></a>取模运算</h4><h5 id="：求余数"><a href="#：求余数" class="headerlink" title="%：求余数"></a>%：求余数</h5><ul><li>两个数相除除数不能为0</li><li>两个小数不能进行取模运算</li></ul><h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><p>作用：通过三目运算符实现简单的判断</p><p>语法：<code>表达式1 ？ 表达式2 ： 表达式3</code></p><p>解释：</p><p>如果表达式1的值为真，执行表达式2，并返回结果；</p><p>如果表达式1的值为假，执行表达式3，并返回结果。</p><p><strong>在C++中，三目运算符返回的是变量，可以继续赋值</strong></p><h3 id="程序流程结构"><a href="#程序流程结构" class="headerlink" title="程序流程结构"></a>程序流程结构</h3><h4 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h4><p>格式</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in"><span class="keyword">switch</span></span> (整型/字符型)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> n:</span><br><span class="line">xxxxx;</span><br><span class="line"><span class="keyword">break</span>;   <span class="comment">//重点要记得写break语句</span></span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="keyword">case</span> i:</span><br><span class="line">xxxxx;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">xxxxx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>if 和 switch 的区别：</p><ul><li>switch缺点：判断的时候只能是整型或者字符型，不能是一个区间</li><li>switch优点：结构清晰，执行效率高</li></ul><h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>随机数：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span>    <span class="comment">//头文件添加</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//添加随机数种子，利用当前系统时间生成随机数，防止每次随机数都一样</span></span><br><span class="line"><span class="built_in">srand</span>((<span class="keyword">unsigned</span> <span class="keyword">int</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));    </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num = <span class="built_in">rand</span>()% <span class="number">100</span> + <span class="number">1</span>    <span class="comment">//在0~100之间随机生成一个数</span></span><br></pre></td></tr></table></figure><h4 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h4><h5 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h5><p>作用：用于跳出<strong>选择结构</strong>或者<strong>循环结构</strong></p><p>使用的时机：</p><ul><li>出现在switch语句中，作用是终止case并跳出switch</li><li>出现在循环语句中，作用是跳出当前的循环语句</li><li>出现在嵌套循环中，跳出最近的内层循环语句</li></ul><h5 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h5><p>作用：在<strong>循环语句</strong>中，跳过本次循环余下尚未执行的语句，继续执行下一次循环</p><h5 id="goto语句"><a href="#goto语句" class="headerlink" title="goto语句"></a>goto语句</h5><p>作用：可以无条件跳转语句</p><p>语法：<code>goto 标记;</code></p><p>解释：如果标记的名称存在，执行到goto语句时，会跳转到标记的位置</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语句<span class="number">1</span>；</span><br><span class="line">语句<span class="number">2</span>；</span><br><span class="line"><span class="keyword">goto</span> FLAG；<span class="comment">//运行到此时跳转到下方标记处</span></span><br><span class="line">语句<span class="number">3</span>；</span><br><span class="line">语句<span class="number">4</span>；</span><br><span class="line">FLAG；  </span><br><span class="line">语句<span class="number">5</span>；</span><br></pre></td></tr></table></figure><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h4><p>一维数组名称用途：</p><ol><li>可以统计整个数组在内存中的长度<code>sizeof(array)</code></li><li>可以获取数组在内存中的首地址<code>可以通过cout &lt;&lt; array直接得到</code></li></ol><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><p><strong>作用：</strong>最常用的算法，对数组内的元素进行排序</p><ol><li>比较相邻的元素。如果第一个比第二个大，就交换这两个元素</li><li>对每一对相邻的元素做相同的工作，执行完一轮后，找到数组中最大的元素</li><li>重复以上步骤，每一轮后需要比较的次数减一，直到不需要比较</li></ol><p><strong>示例：</strong>将数组{4，2，8，0，5，7，1，3，9} 进行升序排序</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">9</span>] = &#123;<span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">9</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span> - <span class="number">1</span>; i++)  <span class="comment">//最外层循环，一共要执行排序的轮次，元素数减1</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span> - <span class="number">1</span> - i; j++)   <span class="comment">// 内层每对元素之间依次向后比较</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])<span class="comment">//比较交换</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span> temp = arr[j];</span><br><span class="line">arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h4><p>二维数组定义的四种方式：</p><ol><li><code>数据类型 数组名[ 行数 ][ 列数 ];</code></li><li><code>数据类型 数组名[ 行数 ][ 列数 ] = &#123; &#123;数据1，数据2&#125; ，&#123;数据3，数据4&#125; &#125;;</code></li><li><code>数据类型 数组名[ 行数 ][ 列数 ] = &#123; 数据1，数据2，数据3，数据4 &#125;;</code></li><li><code>数据类型 数组名[  ][ 列数 ] = &#123; 数据1， 数据2， 数据3， 数据4 &#125;;</code></li></ol><blockquote><p>第二种更加直观，提高代码的可读性</p></blockquote><p>二维数组数组名</p><ul><li>查看二维数组所占程序空间</li><li>获取二维数组首地址</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in"><span class="keyword">sizeof</span></span>(arr)        <span class="comment">//查看二维数组占用内存空间</span></span><br><span class="line"><span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>])     <span class="comment">//查看二维数组第一行占用内存空间</span></span><br><span class="line"><span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>][<span class="number">0</span>])  <span class="comment">//查看第一个元素占用内存空间</span></span><br><span class="line"></span><br><span class="line"><span class="built_in"><span class="keyword">sizeof</span></span>(arr) / <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>])       <span class="comment">//查看二维数组行数</span></span><br><span class="line"><span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) / <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>][<span class="number">0</span>]) <span class="comment">//查看二维数组列数</span></span><br><span class="line"></span><br><span class="line">cout &lt;&lt; (<span class="keyword">int</span>)arr;     <span class="comment">//查看二维数组首地址</span></span><br><span class="line">cout &lt;&lt; (<span class="keyword">int</span>)arr[<span class="number">0</span>];  <span class="comment">//查看二维数组第一行首地址   不强制转换为int的话就直接输出数据了</span></span><br><span class="line">cout &lt;&lt; (<span class="keyword">int</span>)arr[<span class="number">1</span>];  <span class="comment">//查看二维数组第二行首地址</span></span><br><span class="line"></span><br><span class="line">cout &lt;&lt; (<span class="keyword">int</span>)&amp;arr[<span class="number">0</span>][<span class="number">0</span>]  <span class="comment">//查看第一个元素首地址</span></span><br><span class="line">cout &lt;&lt; (<span class="keyword">int</span>)&amp;arr[<span class="number">0</span>][<span class="number">1</span>]  <span class="comment">//查看第二个元素首地址</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>感悟</category>
+          
+          <category> 学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>anotest</title>
-    <url>/2021/07/29/anotest/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>唱歌</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++by黑马</title>
-    <url>/2021/08/06/c-by%E9%BB%91%E9%A9%AC/</url>
-    <content><![CDATA[<h2 id="C-基础入门"><a href="#C-基础入门" class="headerlink" title="C++基础入门"></a>C++基础入门</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>作用：用于记录程序中不可更改的数据</p>
-<p>C++中定义常量两种方式：</p>
-<ol>
-<li><p>#define 宏常量    <code>define 常量名 常量值</code></p>
-<p><strong>通常在文件上方定义</strong>，表示一个常量</p>
-</li>
-<li><p>const 修饰的变量 <code>const 数据类型 常量名 = 常量值</code></p>
-<p><strong>通常在变量定义前加上关键字const</strong>，修饰该变量为常量，不可修改</p>
-</li>
-</ol>
-<h3 id="sizeof关键字"><a href="#sizeof关键字" class="headerlink" title="sizeof关键字"></a>sizeof关键字</h3><p>作用：统计数据类型所占内存的大小</p>
-<p>语法：<code>sizeof( 数据类型 / 变量 )</code></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sizeof</span>（<span class="keyword">short</span>）</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><p>作用：表示小数</p>
-<ol>
-<li>单精度float</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> f1 = <span class="number">3.14f</span>;   <span class="comment">//在使用的时候在数字后面加上一个f</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>双精度double</li>
-</ol>
-<p>两者的<strong>区别</strong>在于表示的有效数字范围不同</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>占用空间</th>
-<th>有效数字范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>float</td>
-<td>4字节</td>
-<td>7位有效数字</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8字节</td>
-<td>15~16位有效数字</td>
-</tr>
-</tbody></table>
-<p>有效数字：第一个不为零的数字开始往后数，同时最后一位要四舍五入。</p>
-<p><strong>默认情况下，输出一个小数，会显示6位有效数字</strong></p>
-<ul>
-<li>科学计数法</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> f2 = <span class="number">3e2</span>;   <span class="comment">//3*10^2</span></span><br><span class="line"><span class="keyword">float</span> f3 = <span class="number">3e-2</span>;  <span class="comment">//3*(0.1)^2</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h4><p>作用：显示单个字符</p>
-<p>语法：<code>char ch = &#39;a&#39;</code></p>
-<ul>
-<li>用单引号括起来，不用双引号</li>
-<li>单引号内只能有一个字符，不能是字符串</li>
-<li>字符型变量只占用一个字节</li>
-<li>字符型变量是将字符对应的ASCII码放到存储单元中存储</li>
-</ul>
-<p>‘A’的ASCII码：65         </p>
-<p>‘a’的ASCII码：97</p>
-<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>换行：<code>\n</code></p>
-<p>反斜杠：<code>\\</code></p>
-<p>水平制表符：<code>\t</code>   作用：在输出的时候可以让代码对齐</p>
-<h4 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a>字符串型</h4><p>作用：用于表示一串字符</p>
-<ol>
-<li>C风格字符串：<code>char 变量名[] = &quot;字符串值&quot;</code></li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> str1[] = <span class="string">&quot;hello world&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>C++风格字符串：<code>string 变量名 = &quot;字符串值&quot;</code></li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span>  <span class="comment">//在C++风格字符串的时候，要包含这个文件</span></span></span><br><span class="line"></span><br><span class="line">string str2 = <span class="string">&quot;Hello World&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="布尔类型bool"><a href="#布尔类型bool" class="headerlink" title="布尔类型bool"></a>布尔类型bool</h4><p>作用：布尔数据类型代表真或假的值</p>
-<p>bool类型只有两个值：</p>
-<ul>
-<li>true ：真（本质是1）</li>
-<li>false：假（本质是0）</li>
-</ul>
-<p><strong>bool类型只占用1个字节大小</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="取模运算"><a href="#取模运算" class="headerlink" title="取模运算"></a>取模运算</h4><h5 id="：求余数"><a href="#：求余数" class="headerlink" title="%：求余数"></a>%：求余数</h5><ul>
-<li>两个数相除除数不能为0</li>
-<li>两个小数不能进行取模运算</li>
-</ul>
-<h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><p>作用：通过三目运算符实现简单的判断</p>
-<p>语法：<code>表达式1 ？ 表达式2 ： 表达式3</code></p>
-<p>解释：</p>
-<p>如果表达式1的值为真，执行表达式2，并返回结果；</p>
-<p>如果表达式1的值为假，执行表达式3，并返回结果。</p>
-<p><strong>在C++中，三目运算符返回的是变量，可以继续赋值</strong></p>
-<h3 id="程序流程结构"><a href="#程序流程结构" class="headerlink" title="程序流程结构"></a>程序流程结构</h3><h4 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h4><p>格式</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in"><span class="keyword">switch</span></span> (整型/字符型)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> n:</span><br><span class="line">	xxxxx;</span><br><span class="line">	<span class="keyword">break</span>;   <span class="comment">//重点要记得写break语句</span></span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="keyword">case</span> i:</span><br><span class="line">	xxxxx;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">	xxxxx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>if 和 switch 的区别：</p>
-<ul>
-<li>switch缺点：判断的时候只能是整型或者字符型，不能是一个区间</li>
-<li>switch优点：结构清晰，执行效率高</li>
-</ul>
-<h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>随机数：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span>    <span class="comment">//头文件添加</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//添加随机数种子，利用当前系统时间生成随机数，防止每次随机数都一样</span></span><br><span class="line"><span class="built_in">srand</span>((<span class="keyword">unsigned</span> <span class="keyword">int</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));    </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num = <span class="built_in">rand</span>()% <span class="number">100</span> + <span class="number">1</span>    <span class="comment">//在0~100之间随机生成一个数</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h4><h5 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h5><p>作用：用于跳出<strong>选择结构</strong>或者<strong>循环结构</strong></p>
-<p>使用的时机：</p>
-<ul>
-<li>出现在switch语句中，作用是终止case并跳出switch</li>
-<li>出现在循环语句中，作用是跳出当前的循环语句</li>
-<li>出现在嵌套循环中，跳出最近的内层循环语句</li>
-</ul>
-<h5 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h5><p>作用：在<strong>循环语句</strong>中，跳过本次循环余下尚未执行的语句，继续执行下一次循环</p>
-<h5 id="goto语句"><a href="#goto语句" class="headerlink" title="goto语句"></a>goto语句</h5><p>作用：可以无条件跳转语句</p>
-<p>语法：<code>goto 标记;</code></p>
-<p>解释：如果标记的名称存在，执行到goto语句时，会跳转到标记的位置</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">语句<span class="number">1</span>；</span><br><span class="line">语句<span class="number">2</span>；</span><br><span class="line"><span class="keyword">goto</span> FLAG；<span class="comment">//运行到此时跳转到下方标记处</span></span><br><span class="line">语句<span class="number">3</span>；</span><br><span class="line">语句<span class="number">4</span>；</span><br><span class="line">FLAG；  </span><br><span class="line">语句<span class="number">5</span>；</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h4><p>一维数组名称用途：</p>
-<ol>
-<li>可以统计整个数组在内存中的长度<code>sizeof(array)</code></li>
-<li>可以获取数组在内存中的首地址<code>可以通过cout &lt;&lt; array直接得到</code></li>
-</ol>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于蕾塞</title>
+      <link href="/2021/08/06/%E5%85%B3%E4%BA%8E%E8%95%BE%E5%A1%9E/"/>
+      <url>/2021/08/06/%E5%85%B3%E4%BA%8E%E8%95%BE%E5%A1%9E/</url>
+      
+        <content type="html"><![CDATA[<p>乡下的老鼠和都市的老鼠，你选哪边？</p><p>作为一个被强行进行人体实验而诞生的改造恶魔、游荡的亡国战士，波姆接近电次只是为了电锯恶魔的心脏。她的思想已经得到了解放，作为蕾塞的她想要爱与和平。在与电次接触的过程中她的想法摇摆了很多次，无论是表现出来的行为还是内心隐藏的感情，合二为一才是她。</p><p>蕾塞的动机并不复杂，孤独限制了她的想象力。</p><p>与电次的相遇是一场意想不到的邂逅。现代世界中的她是一个异端，但她遇到了因为种种原因同样是异端的电次，他们的心如此相似。她不知如何面对，她需要时间去确认，去想。没有人能拒绝有趣的同类，尤其是相似的灵魂。在电次身上能看到天真无知又不幸的自己，她被深深地吸引了，想要和他一起去完成心中的期望。她敞开了自己的心。</p><p>她想做乡下的老鼠，因为乡下安逸，没有危险，不用生活在担惊受怕中。而单纯的电次只是因为想吃更好吃的食物选择了都市的老鼠，她也明白他的单纯，所以她不在意。她想去都市中带走电次，但是都市中有玛奇玛，一直绝对不能碰的猫，于是她又开始了思考。</p><p>即使人互相之间很难理解，但是对蕾塞来说，这是她最后的机会。于是她决定哪怕只有心脏，也要带电次走。就算用暴力也要带走这只向往大都市的老鼠。此时她想带走的不是电锯恶魔的心脏而是电次的心脏。她想得到电次的“心”。</p><p>直白而隐晦的话语，是她的表白。在喜欢的人面前，她永远是少女。爱可以言说，但是难以传递。如果不将愿望寄托在行动上，她可能就再也没有机会了。即使知道他的心里还有其他人，但是没关系，电次会是她的救赎，电次能填上她空洞的心。不知不觉执念已经生长起来。与电次的战斗，爆炸还没结束，但她想教给电次的东西还远远不够。</p><p>两个人在海底纠缠，链锯让两个人拥抱在一起。</p><p>在沙滩上睁开眼，她醒了。世界如此宽广，却没有两个人的容身之地。她进入了他的心，但是那里也装着她的天敌。蕾塞之前对电次还有其他目的，但现在她眼里只有电次。这些她都明白，所以她决定走了。带不走他的心，也带不走他的人，消失是最好的结局。但这一次，竟是电次来迟的接近。他慢了一步，此时她再不走，她怕自己会反悔。他约她在咖啡馆见面，她笑着拒绝然后消失在视野中。但她终究是反悔了。</p><p>电次独自抱着花坐在咖啡馆中，直到天黑了蕾塞也没有来。他不知道的是，就在店外一个街道之隔的小巷中，蕾塞已经被猫抓走了。这一次，是电次醒了。他心意已决，但他才刚刚上路。她没有来，如同她最后的承诺。他们要怎么互相理解呢？况且他们也从来不是老鼠。对不起。他还什么都不知道。</p><p>40话恋·花·电锯到52话失恋·花·电锯。这短短13话是《电锯人》真正打动我的地方。蕾塞，我的超人！</p><p>对我而言，我也选择乡下的老鼠，我渴望平静而安逸的生活，但我也想要孤寂的灵魂间的碰撞，希望能和ta一起逃离都市。<br>（PS：最近喜欢的角色都是短头发的，我觉得我xp改变了。我觉得短头发的女生都好独立勇敢！）</p>]]></content>
+      
+      
       <categories>
-        <category>学习</category>
+          
+          <category> 感悟 </category>
+          
       </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++</title>
-    <url>/2021/08/05/c/</url>
-    <content><![CDATA[<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><hr>
-<h3 id="c和c-的区别"><a href="#c和c-的区别" class="headerlink" title="c和c++的区别"></a>c和c++的区别</h3><ul>
-<li>c是面向过程</li>
-<li>c++是面向对象</li>
-</ul>
-<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><ul>
-<li><p>类是抽象的概念，用于创造对象（比如<strong>狗</strong>这个类）</p>
-</li>
-<li><p>对象是类的实例，是类的具体化，是客观世界真实存在的实体（狗可以分成吉娃娃、萨摩耶等）</p>
-<mark class="hl-label red">面向对象的编程：OOP</mark> </li>
-</ul>
-<p><strong>类实际上就是将数据和操作数据的方法封装合并在一起</strong></p>
-<h3 id="c-泛型编程"><a href="#c-泛型编程" class="headerlink" title="c++泛型编程"></a>c++泛型编程</h3><p>​    强调独立于特定数据类型。对语言进行扩展，实现只编写一个函数，即可以运用于各种实际类型。</p>
-<h3 id="编程步骤"><a href="#编程步骤" class="headerlink" title="编程步骤"></a>编程步骤</h3><ol>
-<li>写源代码</li>
-<li>编译</li>
-<li>经过编译形成目标文件（object）</li>
-<li>链接程序</li>
-<li>经过链接形成可执行文件</li>
-</ol>
-<h2 id="开始学习C"><a href="#开始学习C" class="headerlink" title="开始学习C++"></a>开始学习C++</h2><hr>
-<h3 id="进入C"><a href="#进入C" class="headerlink" title="进入C++"></a>进入C++</h3><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Come up and C++ me some time.&quot;</span>;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;You won&#x27;t regret it!&quot;</span>&lt;&lt;endl;</span><br><span class="line">	cin.<span class="built_in">get</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>预处理器编译指令#include</li>
-<li>函数头：int main（）</li>
-<li>编译指令：using namespace</li>
-</ul>
-<h4 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	statements</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这几行代码构成函数定义。第一行叫做函数头，中间的部分叫做函数体。每条完整的指令都称为语句。<font color="red">在C++中，所有的语句都以分号结束，不能省略。</font>最后一条语句叫做返回语句，它结束该函数。</p>
-<p>main函数的函数头描述的是main（）和操作系统之间的接口。</p>
-<p>如果编译器到达main（）函数末尾时没有遇到返回语句，则认为main（）函数以如下语句结尾：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="C-注释"><a href="#C-注释" class="headerlink" title="C++注释"></a>C++注释</h4><p>C++注释以//开头，到行尾结束</p>
-<p>C++也能识别C注释，C注释包括在符号 /* 和 */ 之间:</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">/* a C-style comment */</span></span></span><br></pre></td></tr></table></figure>
-
-<h4 id="C-预处理器和iostream文件"><a href="#C-预处理器和iostream文件" class="headerlink" title="C++预处理器和iostream文件"></a>C++预处理器和iostream文件</h4><p>如果要使用C++输入<strong>或</strong>输出工具，使用以下两行代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-
-<p>使用预处理器使程序在进行主编译之前对源文件进行处理</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>该编译指令导致预处理器将iostream文件的内容添加到程序中。这样做的<font color="red">目的</font>是：iostream中有多个定义，使用cin和cout来输入和输出信息需要用到这些定义。#include编译指令导致iostream文件的内容隋源代码文件的内容一起被发送给编译器。<font color="red">实际上，原始文件没有被修改，而是将源代码文件和iostream组合成一个复合文件，编译的下一阶段将使用该文件。</font></p>
-<h4 id="头文件名"><a href="#头文件名" class="headerlink" title="头文件名"></a>头文件名</h4><p>像iostream这样的文件叫做包含文件（include file）。C语言的传统是，头文件使用扩展名.h。而在C++去掉了扩展名h（但仍可以使用这种文件），并在文件名前面加上前缀c。比如C++版本的math.h为cmath</p>
-<h4 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h4><p>如果使用iostream而不是iostream.h，则应使用下面的名称空间编译指令来使iostream中的定义对程序可用：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-
-<p>叫做using编译指令。</p>
-<p>名称空间支持目的是在编写大型程序以及多个厂商现有的代码组合起来的程序时更容易，有助于组织程序。在面对多个厂商的不同封装产品时，使用名称空间可以区分不同的版本。</p>
-<mark class="hl-label pink">可以把std的部分看成一个公司名称</mark> 
-
-<p>按照这种方式，类、函数和变量是C++编译器的标准组件，它们都被放置在名称空间std中（当且仅当头文件没有扩展名h时）。这意味着在iostream中定义的用于输出的cout变量实际上是std::out，而endl实际上是std::endl。因此可以省略编译指令using，用如下方式进行编码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="string">&quot;Come up and C++ me some time.&quot;</span>;</span><br><span class="line">std::cout&lt;&lt;std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>更好的方法是，只使所需的名称可用，通过using声明来实现：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"><span class="keyword">using</span> std::endl;</span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用cout进行C-输出"><a href="#使用cout进行C-输出" class="headerlink" title="使用cout进行C++输出"></a>使用cout进行C++输出</h4><p>&lt;&lt;符号表示该语句将把这个字符串发送给cout;该符号指出了信息流动的路径。</p>
-<p>从C++概念上来看，输出是从程序流出的一系列字符。cout对象表示这种流，cout的对象属性包括一个插入运算符（&lt;&lt;），它可以将其右侧的信息插入到流中。</p>
-<ol>
-<li><p>控制符endl</p>
-<p>表示重启一行。诸如endl等对于cout来说有特殊含义的特殊符号被称为控制符。和cout一样，endl也是在头文件iostream中定义的，且位于名称期间std中。</p>
-</li>
-<li><p>换行符</p>
-<p>另一种换行的旧式方法：C语言符号\n:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">&quot;What&#x27;s next?\n&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p><font color="red">两者之间的区别：</font>endl确保程序继续运行前刷新输出（将其立刻显示在屏幕上）；而\n不能保证。</p>
-</li>
-</ol>
-<h3 id="C-语句"><a href="#C-语句" class="headerlink" title="C++语句"></a>C++语句</h3>]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构</title>
+      <link href="/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <url>/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<center>数据结构</center><hr><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a><center>绪论</center></h2><h3 id="🎈数据结构的研究内容"><a href="#🎈数据结构的研究内容" class="headerlink" title="🎈数据结构的研究内容"></a>🎈数据结构的研究内容</h3><p><strong>计算机解决问题的步骤：</strong></p><ul><li>将问题抽象为<font color="red">数学模型</font></li><li>设计算法</li><li>编程、调试、运行</li></ul><p><strong>早期，计算机应用于数值计算：</strong></p><ul><li>分析问题，找出对象以及对象之间的关系</li><li>建立数学方程</li><li>求解</li></ul><p><strong>随着计算机应用领域的扩展，越来越多被用于非数值计算：</strong></p><ul><li>线性表</li><li>树</li><li>图</li></ul><p>以上都是“非数值计算”的程序设计问题</p><blockquote><p>综上所述，数据结构是一门研究<font color="red">非数值计算的</font>程序设计中计算机的<font color="red">操作对象</font>以及他们之间的<font color="red">关系</font>和<font color="red">操作</font>的学科。</p></blockquote><h3 id="🎈基本概念和术语"><a href="#🎈基本概念和术语" class="headerlink" title="🎈基本概念和术语"></a>🎈基本概念和术语</h3><h4 id="数据、数据元素、数据项和数据对象"><a href="#数据、数据元素、数据项和数据对象" class="headerlink" title="数据、数据元素、数据项和数据对象"></a>数据、数据元素、数据项和数据对象</h4><ol><li><p>数据(Data)：是描述客观事物的符号，是计算机中可以操作的对象，是能被输入计算机且能被计算机处理的各种符号的集合。</p><p>包括：</p></li></ol><ul><li>数值型数据：整数、实数等</li><li>非数值型数据：文字、图像、图形、声音等</li></ul><ol start="2"><li>数据元素(Data element)：数据元素是数据的基本单位，通常作为一个整体进行考虑和处理，也称为元素、记录、结点或顶点。</li><li>数据项：构成数据元素的不可分割的最小单位</li></ol><blockquote><p><font color="red">以上三者之间的关系：</font>数据&gt;数据元素&gt;数据项</p></blockquote><ol start="4"><li><p>数据对象(Data Object)：性质相同的数据元素的结合，是数据的一个子集。</p><p>数据元素和数据对象与数据的关系的区别：</p></li></ol><ul><li>数据元素是集合的个体</li><li>数据对象是集合的子集</li></ul><h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><ul><li><p>数据元素互相之间的关系称为<font color="red">结构</font></p></li><li><p>是指相互之间存在一种或多种特定关系的数据元素集合</p></li><li><p><font color="red">包含以下三方面内容：</font></p><ol><li>数据元素之间的逻辑关系，也称为<font color="red">逻辑结构</font></li><li>数据元素及其关系在计算机内存中的表示（又称为映像）称为数据的<font color="red">物理结构</font>或数据的<font color="red">存储结构</font></li><li>数据的<font color="red">运算和实现，</font>即对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现</li></ol></li><li><p>数据结构的两个层次：</p><ol><li><p><font color="red">逻辑结构：</font>是指数据对象中数据元素之间的互相关系</p><p><strong>逻辑结构的种类：</strong></p><p>划分方法一：</p><ol><li><font color="red">线性结构：</font>有且仅有一个开始和终端结点，并且所有结点都最多只有一个直接前驱和一个直接后继。</li><li><font color="red">非线性结构：</font>一个结点可能有多个直接前驱和直接后继。</li></ol><p>划分方法二：</p><ol><li><font color="red">集合结构：</font>其中的数据元素只有<font color="red">只属于一个集合</font>的关系</li><li><font color="red">线性结构：</font>数据元素存在<font color="red">一对一</font>的线性关系</li><li><font color="red">树形结构：</font>数据元素存在<font color="red">一对多</font>的线性关系</li><li><font color="red">图状/网状结构：</font>数据元素存在<font color="red">多对多</font>的线性关系</li></ol></li><li><p><font color="red">物理结构（存储结构）：</font>是指数据的逻辑结构在计算机中的存储形式</p><p><strong>存储结构的种类：</strong></p><p>​    <font color="red">四种基本的存储结构：</font></p><p>​    1.<font color="red">顺序存储结构：</font>用一组连续的存储单元一次存储数据元素，数据元素之间的逻辑关系用存储位置表示</p><p>​    2.<font color="red">链式存储结构：</font>用一组任意的存储单元存储数据元素，数据元素之间的逻辑关系用指针来表示</p><p>​    3.<font color="red">索引存储结构：</font>在存储结点信息的同时，还建立附加的索引表（其中的每一项称为索引项）</p><p>​    4.<font color="red">散列存储结构：</font>根据结点的关键字直接计算出该结点的存储地址</p><p><strong>逻辑结构和存储结构之间的关系：</strong></p><ul><li>存储结构是逻辑关系的映像与元素本身的映像</li><li>逻辑结构是数据结构的抽象，存储结构是数据结构的实现</li><li>两者综合起来建立了数据元素之间的结构关系</li></ul></li></ol></li></ul><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>数据类型(Data Type):是指一组性质相同的<font color="red">值的集合</font>及定义在此集合上的<font color="red">一组操作</font>的总称</p><blockquote><p>数据类型 = 值的集合 + 值集合上的一组操作</p></blockquote><p><strong>在C语言中，按照取值的不同，可以分为两类：</strong></p><ul><li>原子类型：是不可以再分解的基本类型，包括整型、实型、字符型等</li><li>结构类型：有若干个类型集合而成，是可以再分解的。例如，整型数组是由若干整型数据组成的</li></ul><h4 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h4><mark class="hl-label red">抽象是指抽取出事物具有的普遍性的本质。</mark> <p>通过对已有的数据类型进行抽象得到。</p><p>抽象数据类型（Abstract Data Type, ADT）：是指一个数学模型及定义在该模型上的一组操作。</p><ul><li>由用户定义，从问题中抽象出<font color="red">数据模型</font>（逻辑结构）。</li><li>还包括定义在数据模型上的一组<font color="red">抽象运算</font>（相关操作）。</li></ul><p><strong>抽象数据类型的形式定义：</strong></p><p>抽象数据类型可以用（D，S，P）<font color="red">三元组</font>表示。</p><p>其中：D是数据对象；</p><p>​            S是D上的关系集；</p><p>​            P是对D的基本操作集。</p><p><strong>抽象数据类型的定义格式如下：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">&#123;</span><br><span class="line">数据对象：&lt;数据对象的定义&gt;<span class="comment">//其中，数据对象和数据关系用伪代码描述</span></span><br><span class="line">数据关系：&lt;数据关系的定义&gt;<span class="comment">//基本操作的定义格式为：</span></span><br><span class="line">基本操作：&lt;基本操作的定义&gt;<span class="comment">// 基本操作名（参数表）</span></span><br><span class="line">&#125;ADT 抽象数据类型名   <span class="comment">// 初始条件：&lt;初始条件描述&gt;</span></span><br><span class="line">    <span class="comment">// 操作结果：&lt;操作结果描述&gt;                     </span></span><br></pre></td></tr></table></figure><hr><p><strong>基本操作</strong>定义格式说明：</p><p>参数表：赋值参数 只为操作提供输入值</p><p>​                引用参数 以&amp;打头，除可提供输入值外，还将返回操作结果</p><p>初始条件：描述操作执行之前数据结构和参数应满足的条件，若不满足，则操作失败，并返回相应出错信息。若初始条件为空，则省略之。</p><p>操作结果：说明操作正常完成之后，数据结构的变化状况和应返回的结果。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">Data</span><br><span class="line">数据对象的定义</span><br><span class="line">数据元素之间逻辑关系的定义</span><br><span class="line">Operation</span><br><span class="line">操作1</span><br><span class="line">初始条件</span><br><span class="line">操作结果描述</span><br><span class="line">操作2</span><br><span class="line">...</span><br><span class="line">操作n</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a><center>算法</center></h2><p><strong>数据额结构和算法的关系是相互依赖不可分割的。</strong></p><h3 id="🎈算法定义"><a href="#🎈算法定义" class="headerlink" title="🎈算法定义"></a>🎈算法定义</h3><p>算法是解决特定问题<strong>求解方法和步骤</strong>的描述，在计算机中表现为<font color="red">指令</font>的有限<font color="red">序列</font>，并且每条指令表示一个或多个操作。</p><p><strong>算法的描述：</strong></p><ul><li>自然语言：中文、英语</li><li>流程图</li><li>伪代码</li><li>程序代码</li></ul><p><strong>算法与程序：</strong></p><p><strong>算法</strong>是解决问题的一种方法或一个过程，考虑如何将输入转换成输出，一个问题可以有多种算法</p><p><strong>程序</strong>是用某种程序设计语言对算法的具体实现</p><blockquote><p>程序 = 数据结构 + 算法</p></blockquote><h3 id="🎈算法的特性"><a href="#🎈算法的特性" class="headerlink" title="🎈算法的特性"></a>🎈算法的特性</h3><h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><ul><li>算法具有零个或多个输入</li><li>算法至少有一个或多个输出</li></ul><h4 id="有穷性"><a href="#有穷性" class="headerlink" title="有穷性"></a>有穷性</h4><p>算法在执行有穷步之后结束，并且每一个步骤在有穷的时间内完成。</p><h4 id="确定性"><a href="#确定性" class="headerlink" title="确定性"></a>确定性</h4><p>算法的每一步骤都具有确定的含义，不会出现二义性，任何条件下只有唯一的一条执行路径，即对于相同的输入只能得到相同的输出。</p><h4 id="可行性"><a href="#可行性" class="headerlink" title="可行性"></a>可行性</h4><p>算法是可执行的，算法描述的操作可以通过已经实现的基本操作执行有限次来实现。</p><h3 id="🎈算法设计的要求"><a href="#🎈算法设计的要求" class="headerlink" title="🎈算法设计的要求"></a>🎈算法设计的要求</h3><h4 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h4><p>算法的正确性是指算法至少应该具有输入、输出和加工处理无歧义性、能正确反映问题的需求、能够得到问题的正确答案。</p><p>可以分为四个层次：</p><ol><li>算法程序<font color="red">不含语法错误</font></li><li>算法程序对于<font color="red">几组输入数据</font>能够产生满足要求的输出结果。</li><li>算法程序对于<font color="red">精心选择的、典型、苛刻且带有刁难性的</font>几组输入数据能够得出满足要求的结果。</li><li>算法程序对于<font color="red">一切合法的输入数据</font>都有满足要求的输出结果。</li></ol><p>一般情况下，把<font color="red">第三层</font>作为衡量一个算法是否合格的标准。同时，一个好的算法还要容易理解。</p><h4 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h4><p>算法设计的另一目的是为了便于阅读、理解和交流。隐晦难读的算法易于隐藏较多错误难以调试</p><h4 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h4><ul><li>当<font color="red">输入非法数据</font>时，算法也能恰当做出反应和处理，而不是产生异常或莫名奇妙的结果。</li><li>处理出错的方法，不应该是中断程序的执行，而应返回一个表示错误或错误属性的值，以便在更高的抽象层次上进行处理。</li></ul><h4 id="时间效率高和存储量低"><a href="#时间效率高和存储量低" class="headerlink" title="时间效率高和存储量低"></a>时间效率高和存储量低</h4><p>设计算法应该尽量满足时间效率高和存储量低的需求。</p><h3 id="🎈算法效率的度量方法"><a href="#🎈算法效率的度量方法" class="headerlink" title="🎈算法效率的度量方法"></a>🎈算法效率的度量方法</h3><p><strong>算法效率从以下两个方面来考虑：</strong></p><p><font color="red">1.时间效率： </font>指的是算法所耗费的时间</p><p><font color="red">2.空间效率：</font>指的是算法执行过程中所耗费的存储空间</p><p><strong>时间效率和空间效率有时候是矛盾的</strong></p><h4 id="事后统计方法"><a href="#事后统计方法" class="headerlink" title="事后统计方法"></a>事后统计方法</h4><p>将算法实现，测试其时间和空间开销。缺陷：编写程序耗费较多的时间和精力；所得实验结果依赖于计算机的软硬件等环境因素，掩盖算法本身的优劣。</p><h4 id="事前分析估算方法"><a href="#事前分析估算方法" class="headerlink" title="事前分析估算方法"></a>事前分析估算方法</h4><p><strong><font color="red">算法运行时间指算法中每条语句的频度之和（假设每条语句时间为单位时间）</font></strong></p><p>在计算机程序编制前，依据统计方法对算法进行估算。</p><p>程序在计算机上运行时所消耗的时间取决于下列因素：</p><ol><li>算法采用的策略、方法</li><li>编译产生的代码质量</li><li>问题的输入规模</li><li>机器指令执行的速度</li></ol><blockquote><p>抛开软件和硬件的因素，一个程序的运行时间，依赖于<strong>算法的好坏和问题的输入规模</strong>。问题输入规模是指输入量的多少。</p></blockquote><p><strong>在分析程序的运行时间时，最重要的是把程序看成是独立于程序设计语言的算法或一系列步骤。</strong></p><h3 id="🎈函数的渐近增长"><a href="#🎈函数的渐近增长" class="headerlink" title="🎈函数的渐近增长"></a>🎈函数的渐近增长</h3><blockquote><p>定义：给定两个函数f（n）和g（n），如果存在一个整数N，是的对于所有n&gt;N，f（n）总是比g（n）大，那么，我们说f（n）的增长渐近快于g（n）。</p></blockquote><p>结论：判断一个算法的效率时，函数中的常数和其他次要项常常可以忽略，而更应该关注主项（最高阶项）的阶数。</p><h3 id="🎈算法时间复杂度"><a href="#🎈算法时间复杂度" class="headerlink" title="🎈算法时间复杂度"></a>🎈算法时间复杂度</h3><h4 id="算法时间复杂度定义"><a href="#算法时间复杂度定义" class="headerlink" title="算法时间复杂度定义"></a>算法时间复杂度定义</h4><blockquote><p>在进行算法分析时，语句总的执行次数T（n）是关于问题规模n的函数，进而分析T（n）随n的变化情况并确定T（n）的数量级。算法的时间复杂度，也就是算法的时间量度，记作 T(n)=O(f(n)) 。它表示随问题规模n的增大，算法执行时间的增长率和f（n）的增长率相同，称作<font color="red"><strong>渐进时间复杂度</strong></font>，简称为时间复杂度。一般情况下，不必计算所有操作的 执行次数，而只考虑算法中<strong>基本操作</strong>执行的次数，它是问题规模n的某个函数，用T（n）表示。</p></blockquote><p>这样用大写 O() 来体现算法时间复杂度的记法，称之为大O记法。</p><p>一般情况下，随着n的增大，T（n）增长最慢的算法为最优算法。</p><p><strong>分析算法时间复杂度的基本方法：</strong></p><ol><li>找出<font color="red">语句频度最大</font>的那条语句作为<font color="red">基本语句</font></li><li>计算<font color="red">基本语句</font>的频度得到问题规模n的某个函数f（n）</li><li>取其数量级用符号“O”表示</li></ol><h4 id="推导大O阶方法"><a href="#推导大O阶方法" class="headerlink" title="推导大O阶方法"></a>推导大O阶方法</h4><ol><li>用常数1取代运行时间中的所有加法常数。</li><li>在修改后的运行次数函数中，只保留最高阶项</li><li>如果最高阶项存在且不是1，则去除与这个项相乘的常数</li><li>得到的结果就是大O阶</li></ol><h4 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h4><p>如果一个算法，无论n为多少，上面的两端代码执行的次数是不变的。这种与问题的大小无关（n的多少），执行时间恒定的算法，我们称之为具有O（1）的时间复杂度，又叫常数阶。</p><mark class="hl-label red">即执行次数恒定，不会随着n的变大而发生变化</mark> <h4 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h4><p>要确定某个算法的阶次，我们常常要确定某个特定语句或者某个语句集运行的次数。因此，我们要<strong>分析算法的复杂度，关键就是要分析循环结构的运行情况</strong>。</p><p>下面这段代码，它的循环的时间复杂度为O（n），因为循环体中的代码需要执行n次。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(count &lt; n)</span><br><span class="line">&#123;</span><br><span class="line">count = count * <span class="number">2</span>;</span><br><span class="line"><span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>有多少个2相乘后大于n，就会退出循环。由 2<sup>x</sup>=n 得到 x=log<sub>2</sub>n 。所以这个循环的时间复杂度为 O(log<sub>n</sub>) 。</p><h4 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; J++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>它的内循环的时间复杂度为O（n），而它的外循环是对于内部时间复杂度为O（n）的语句，再循环n次。所以它的时间复杂度为O（n<sup>2</sup>）。</p><p>如果外循环的循环次数改成了m，那么时间复杂度就变为O（m*n）。</p><p>总结得出，<font color="red">循环的时间复杂度等于循环体的复杂度乘以该循环运行的次数</font>。</p><p>对于下面这个循环嵌套：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span> (j = i; j &lt; n; j++) <span class="comment">/* 注意int j = i 而不是0 */</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当i=0时，内循环执行了n次，当i=1时，内循环执行了n-1次，……当i=n-1时，执行了1次。所以总执行次数为：</p><center>n+(n-1)+(n-2)+···+1=n(n+1)/2+n/2</center><p>用推导大O阶的方法，得出这段代码的时间复杂度为O（n<sup>2</sup>）。</p><h4 id="算法的加法法则和乘法法则"><a href="#算法的加法法则和乘法法则" class="headerlink" title="算法的加法法则和乘法法则"></a>算法的加法法则和乘法法则</h4><ul><li><p>加法法则</p><p>T(n) = T1(n) + T2(n) = O(f(n)) + O(g(n)) = O( max ( f(n) , g(n) ) )</p></li><li><p>乘法法则</p><p>T(n) = T1(n) * T2(n) = O(f(n)) + O(g(n)) = O( f(n) * g(n) )</p></li></ul><h4 id="🎈常用的时间复杂度"><a href="#🎈常用的时间复杂度" class="headerlink" title="🎈常用的时间复杂度"></a>🎈常用的时间复杂度</h4><table><thead><tr><th align="center">执行次数函数</th><th align="center">阶</th><th align="center">非正式术语</th></tr></thead><tbody><tr><td align="center">12</td><td align="center">O（1）</td><td align="center">常数阶</td></tr><tr><td align="center">2n+3</td><td align="center">O（n）</td><td align="center">线性阶</td></tr><tr><td align="center">3n<sup>2</sup>+2n+1</td><td align="center">O（n<sup>2</sup>）</td><td align="center">平方阶</td></tr><tr><td align="center">5log<sub>2</sub>n+20</td><td align="center">O（log<sub>2</sub>n）</td><td align="center">对数阶</td></tr><tr><td align="center">2n+3nlog<sub>2</sub>n+19</td><td align="center">O（nlog<sub>2</sub>n）</td><td align="center">nlog<sub>2</sub>n阶</td></tr><tr><td align="center">6n<sup>3</sup>+2n<sup>2</sup>+3n+4</td><td align="center">O（n<sup>3</sup>）</td><td align="center">立方阶</td></tr><tr><td align="center">2<sup>n</sup></td><td align="center">O（2<sup>n</sup>）</td><td align="center">指数阶</td></tr></tbody></table><p>常用的时间复杂度所耗费的时间从小到大依次是：</p><blockquote><p>O（1）&lt;O（log<sub>2</sub>n）&lt; O（n）&lt;O（nlog<sub>2</sub>n）&lt;O（n<sup>2</sup>）&lt;O（n<sup>3</sup>）&lt;O（2<sup>n</sup>）&lt;O（n！）&lt;O（n<sup>n</sup>）</p></blockquote><h3 id="🎈最坏情况与平均情况"><a href="#🎈最坏情况与平均情况" class="headerlink" title="🎈最坏情况与平均情况"></a>🎈最坏情况与平均情况</h3><ul><li><strong>最坏情况运行时间是一种保证，那就是运行时间将不会再坏了。在应用中，这是一种最重要的需求，通常，除非特别指定，我们提到的运行时间都是最坏情况的运行时间。</strong></li><li>平均运行时间是所有情况中最有意义的，因为它是期望的运行时间。（一般通过运行一定数量的实验数据后估算出来的）</li></ul><h3 id="🎈算法空间复杂度"><a href="#🎈算法空间复杂度" class="headerlink" title="🎈算法空间复杂度"></a>🎈算法空间复杂度</h3><p>算法的空间复杂度通过计算算法所需的存储空间实现，算法空间复杂度的计算公式记作： S(n) = O(f(n)) ，其中，n为问题的规模，f（n）为语句关于n所占存储空间的函数。</p><p><strong>算法要占据的空间：</strong></p><ul><li>算法本身要占据的空间，输入/输出，指令，常数，变量等</li><li>算法要使用<font color="red">辅助空间</font></li></ul><hr><h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><center>线性表</center></h2><h3 id="🎵线性表的定义和特点"><a href="#🎵线性表的定义和特点" class="headerlink" title="🎵线性表的定义和特点"></a>🎵线性表的定义和特点</h3><p><strong>线性表(Linear List):</strong></p><ul><li>由n个数据元素（结点）组成的<font color="red">有限序列</font></li><li>其中数据元素的个数n定义为表的长度</li><li>当n=0时称为空表</li><li>数据元素ai只是一个抽象的符号，其具体含义在不同的情况下可以不同</li></ul><p><font color="red">同一线性表中的元素必定具有相同特征，数据元素间的关系是线性关系</font></p><p><strong>线性表的逻辑特征是：</strong></p><ol><li>非空的线性表有且只有一个开始结点，它没有直接前驱，而且仅有一个直接后继</li><li>有且只有一个终端结点，它没有直接后继，而仅有一个直接前驱</li><li>其余的内部结点有且只有一个直接前驱和一个直接后继</li></ol><p><font color="red">线性表是一种典型的线性结构</font></p><h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
+      
+      
       <categories>
-        <category>学习</category>
+          
+          <category> 学习 </category>
+          
       </categories>
-      <tags>
-        <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>firstpost</title>
-    <url>/2021/07/28/firstpost/</url>
-    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello, world!"></a>Hello, world!</h2><p>here is my first post.</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阅读测试</title>
+      <link href="/2021/08/04/%E9%98%85%E8%AF%BB%E6%B5%8B%E8%AF%95/"/>
+      <url>/2021/08/04/%E9%98%85%E8%AF%BB%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>篮球</category>
+          
+          <category> 阅读 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>关于蕾塞</title>
-    <url>/2021/08/06/%E5%85%B3%E4%BA%8E%E8%95%BE%E5%A1%9E/</url>
-    <content><![CDATA[<p>乡下的老鼠和都市的老鼠，你选哪边？</p>
-<p>作为一个被强行进行人体实验而诞生的改造恶魔、游荡的亡国战士，波姆接近电次只是为了电锯恶魔的心脏。<br>她的思想已经得到了解放，作为蕾塞的她想要爱与和平。在与电次接触的过程中她的想法摇摆了很多次，无论是表现出来的<br>行为还是内心隐藏的感情，合二为一才是她。</p>
-<p>蕾塞的动机并不复杂，孤独限制了她的想象力。</p>
-<p>与电次的相遇是一场意想不到的邂逅。现代世界中的她是一个异端，但她遇到了因为种种原因同样是异端的电次，他们的心如此相似。<br>她不知如何面对，她需要时间去确认，去想。没有人能拒绝有趣的同类，尤其是相似的灵魂。在电次身上能看到天真无知又不幸的自己，<br>她被深深地吸引了，想要和他一起去完成心中的期望。她敞开了自己的心。</p>
-<p>她想做乡下的老鼠，因为乡下安逸，没有危险，不用生活在担惊受怕中。而单纯的电次只是因为想吃更好吃的食物选择了都市的老鼠，<br>她也明白他的单纯，所以她不在意。她想去都市中带走电次，但是都市中有玛奇玛，一直绝对不能碰的猫，于是她又开始了思考。</p>
-<p>即使人互相之间很难理解，但是对蕾塞来说，这是她最后的机会。于是她决定哪怕只有心脏，也要带电次走。就算用暴力也要带走这只<br>向往大都市的老鼠。此时她想带走的不是电锯恶魔的心脏而是电次的心脏。她想得到电次的“心”。</p>
-<p>直白而隐晦的话语，是她的表白。在喜欢的人面前，她永远是少女。爱可以言说，但是难以传递。如果不将愿望寄托在行动上，她可能<br>就再也没有机会了。即使知道他的心里还有其他人，但是没关系，电次会是她的救赎，电次能填上她空洞的心。不知不觉执念已经生长起来<br>。与电次的战斗，爆炸还没结束，但她想教给电次的东西还远远不够。</p>
-<p>两个人在海底纠缠，链锯让两个人拥抱在一起。</p>
-<p>在沙滩上睁开眼，她醒了。世界如此宽广，却没有两个人的容身之地。她进入了他的心，但是那里也装着她的天敌。蕾塞之前对电次还有<br>其他目的，但现在她眼里只有电次。这些她都明白，所以她决定走了。带不走他的心，也带不走他的人，消失是最好的结局。但这一次<br>，竟是电次来迟的接近。他慢了一步，此时她再不走，她怕自己会反悔。他约她在咖啡馆见面，她笑着拒绝然后消失在视野中。但她终究是<br>反悔了。</p>
-<p>电次独自抱着花坐在咖啡馆中，直到天黑了蕾塞也没有来。他不知道的是，就在店外一个街道之隔的小巷中，蕾塞已经被猫抓走了。<br>这一次，是电次醒了。他心意已决，但他才刚刚上路。她没有来，如同她最后的承诺。他们要怎么互相理解呢？况且他们也从来不是老鼠。<br>对不起。他还什么都不知道。</p>
-<p>40话恋·花·电锯到52话失恋·花·电锯。这短短13话是《电锯人》真正打动我的地方。蕾塞，我的超人！</p>
-<p>对我而言，我也选择乡下的老鼠，我渴望平静而安逸的生活，但我也想要孤寂的灵魂间的碰撞，希望能和ta一起逃离都市。<br>（PS：最近喜欢的角色都是短头发的，我觉得我xp改变了。我觉得短头发的女生都好独立勇敢！）</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哲学</title>
+      <link href="/2021/08/03/%E5%93%B2%E5%AD%A6/"/>
+      <url>/2021/08/03/%E5%93%B2%E5%AD%A6/</url>
+      
+        <content type="html"><![CDATA[<p>哲学第一课</p><p>啊</p>]]></content>
+      
+      
       <categories>
-        <category>感悟</category>
+          
+          <category> 感悟 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>ttt</title>
-    <url>/2021/08/02/ttt/</url>
-    <content><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ttt</title>
+      <link href="/2021/08/02/ttt/"/>
+      <url>/2021/08/02/ttt/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>学习</category>
+          
+          <category> 学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>哲学</title>
-    <url>/2021/08/03/%E5%93%B2%E5%AD%A6/</url>
-    <content><![CDATA[<p>哲学第一课</p>
-<p>啊</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>感悟</title>
+      <link href="/2021/08/02/%E6%84%9F%E6%82%9F/"/>
+      <url>/2021/08/02/%E6%84%9F%E6%82%9F/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>事情的结果是这样子的</strong></p><p><code>Hello world</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">printfasasdasd</span><br><span class="line">asdda</span><br></pre></td></tr></table></figure><hr><blockquote><p>但是</p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>感悟</category>
+          
+          <category> 哲学 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>感悟</title>
-    <url>/2021/08/02/%E6%84%9F%E6%82%9F/</url>
-    <content><![CDATA[<p> <strong>事情的结果是这样子的</strong></p>
-<p><code>Hello world</code></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">printfasasdasd</span><br><span class="line">asdda</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<blockquote>
-<p>但是</p>
-</blockquote>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Everyday Routine</title>
+      <link href="/2021/08/02/ER/"/>
+      <url>/2021/08/02/ER/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p><strong>你想要什么：</strong></p><p>⛹️‍♂️健康的身体</p><p>📖多读书充实自己</p><p>🎵有兴趣爱好能够娱乐自己</p><p>🎁能赚到足够的钱能买自己想要的东西</p><p>🗄有充足的知识能够胜任自己感兴趣的工作</p></li><li><p><strong>想要成为什么样的人：</strong></p><p>平静，任何时候都不慌乱，理性面对一切事情</p><p>责任，不逃避要发生的事情</p><p>外向，关心他人，吸引他人</p></li><li><p><strong>要怎么做：</strong></p><p>摆脱拖延症</p><p>摆脱即时娱乐</p><p>不做没有意义的事情，即使要玩游戏也是和朋友一起玩</p><p>抽时间多读书</p><p>养成良好的作息习惯</p></li><li><p><strong>如果选择即时娱乐会怎么样：</strong></p><p>到毕业的时候，仍然做什么事情都半吊子，既没有做好考研的准备也没有做好工作的准备，仍然会时刻处于焦虑之中，自我怀疑</p></li><li><p>成功的道路并不像想象得那么拥挤，因为在人生的马拉松长路上，绝大部分人跑不到一半就主动退下来了。到后来，剩下的少数人不是嫌竞争对手太多，而是发愁怎样找一个同伴陪自己一同跑下去。因此，教育是一辈子的事情，笑到最后的人是一辈子接受教育的人。回过头来看，一些过去比我们读书更优秀，在起跑线上抢到了更好位置的人，早已放弃了人生的马拉松，我们能够跑得更远，仅仅是因为我们还在跑，如此而已。</p></li></ul>]]></content>
+      
+      
       <categories>
-        <category>哲学</category>
+          
+          <category> 感悟 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>阅读测试</title>
-    <url>/2021/08/04/%E9%98%85%E8%AF%BB%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>anotest</title>
+      <link href="/2021/07/29/anotest/"/>
+      <url>/2021/07/29/anotest/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 唱歌 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>firstpost</title>
+      <link href="/2021/07/28/firstpost/"/>
+      <url>/2021/07/28/firstpost/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello, world!"></a>Hello, world!</h2><p>here is my first post.</p>]]></content>
+      
+      
       <categories>
-        <category>阅读</category>
+          
+          <category> 篮球 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>数据结构</title>
-    <url>/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<center>数据结构</center>
-
-<hr>
-<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a><center>绪论</center></h2><h3 id="🎈数据结构的研究内容"><a href="#🎈数据结构的研究内容" class="headerlink" title="🎈数据结构的研究内容"></a>🎈数据结构的研究内容</h3><p><strong>计算机解决问题的步骤：</strong></p>
-<ul>
-<li>将问题抽象为<font color="red">数学模型</font></li>
-<li>设计算法</li>
-<li>编程、调试、运行</li>
-</ul>
-<p><strong>早期，计算机应用于数值计算：</strong></p>
-<ul>
-<li>分析问题，找出对象以及对象之间的关系</li>
-<li>建立数学方程</li>
-<li>求解</li>
-</ul>
-<p><strong>随着计算机应用领域的扩展，越来越多被用于非数值计算：</strong></p>
-<ul>
-<li>线性表</li>
-<li>树</li>
-<li>图</li>
-</ul>
-<p>以上都是“非数值计算”的程序设计问题</p>
-<blockquote>
-<p>综上所述，数据结构是一门研究<font color="red">非数值计算的</font>程序设计中计算机的<font color="red">操作对象</font>以及他们之间的<font color="red">关系</font>和<font color="red">操作</font>的学科。</p>
-</blockquote>
-<h3 id="🎈基本概念和术语"><a href="#🎈基本概念和术语" class="headerlink" title="🎈基本概念和术语"></a>🎈基本概念和术语</h3><h4 id="数据、数据元素、数据项和数据对象"><a href="#数据、数据元素、数据项和数据对象" class="headerlink" title="数据、数据元素、数据项和数据对象"></a>数据、数据元素、数据项和数据对象</h4><ol>
-<li><p>数据(Data)：是描述客观事物的符号，是计算机中可以操作的对象，是能被输入计算机且能被计算机处理的各种符号的集合。</p>
-<p>包括：</p>
-</li>
-</ol>
-<ul>
-<li>数值型数据：整数、实数等</li>
-<li>非数值型数据：文字、图像、图形、声音等</li>
-</ul>
-<ol start="2">
-<li>数据元素(Data element)：数据元素是数据的基本单位，通常作为一个整体进行考虑和处理，也称为元素、记录、结点或顶点。</li>
-<li>数据项：构成数据元素的不可分割的最小单位</li>
-</ol>
-<blockquote>
-<p><font color="red">以上三者之间的关系：</font>数据&gt;数据元素&gt;数据项</p>
-</blockquote>
-<ol start="4">
-<li><p>数据对象(Data Object)：性质相同的数据元素的结合，是数据的一个子集。</p>
-<p>数据元素和数据对象与数据的关系的区别：</p>
-</li>
-</ol>
-<ul>
-<li>数据元素是集合的个体</li>
-<li>数据对象是集合的子集</li>
-</ul>
-<h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><ul>
-<li><p>数据元素互相之间的关系称为<font color="red">结构</font></p>
-</li>
-<li><p>是指相互之间存在一种或多种特定关系的数据元素集合</p>
-</li>
-<li><p><font color="red">包含以下三方面内容：</font></p>
-<ol>
-<li>数据元素之间的逻辑关系，也称为<font color="red">逻辑结构</font></li>
-<li>数据元素及其关系在计算机内存中的表示（又称为映像）称为数据的<font color="red">物理结构</font>或数据的<font color="red">存储结构</font></li>
-<li>数据的<font color="red">运算和实现，</font>即对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现</li>
-</ol>
-</li>
-<li><p>数据结构的两个层次：</p>
-<ol>
-<li><p><font color="red">逻辑结构：</font>是指数据对象中数据元素之间的互相关系</p>
-<p><strong>逻辑结构的种类：</strong></p>
-<p>划分方法一：</p>
-<ol>
-<li><font color="red">线性结构：</font>有且仅有一个开始和终端结点，并且所有结点都最多只有一个直接前驱和一个直接后继。</li>
-<li><font color="red">非线性结构：</font>一个结点可能有多个直接前驱和直接后继。</li>
-</ol>
-<p>划分方法二：</p>
-<ol>
-<li><font color="red">集合结构：</font>其中的数据元素只有<font color="red">只属于一个集合</font>的关系</li>
-<li><font color="red">线性结构：</font>数据元素存在<font color="red">一对一</font>的线性关系</li>
-<li><font color="red">树形结构：</font>数据元素存在<font color="red">一对多</font>的线性关系</li>
-<li><font color="red">图状/网状结构：</font>数据元素存在<font color="red">多对多</font>的线性关系</li>
-</ol>
-</li>
-<li><p><font color="red">物理结构（存储结构）：</font>是指数据的逻辑结构在计算机中的存储形式</p>
-<p><strong>存储结构的种类：</strong></p>
-<p>​    <font color="red">四种基本的存储结构：</font></p>
-<p>​    1.<font color="red">顺序存储结构：</font>用一组连续的存储单元一次存储数据元素，数据元素之间的逻辑关系用存储位置表示</p>
-<p>​    2.<font color="red">链式存储结构：</font>用一组任意的存储单元存储数据元素，数据元素之间的逻辑关系用指针来表示</p>
-<p>​    3.<font color="red">索引存储结构：</font>在存储结点信息的同时，还建立附加的索引表（其中的每一项称为索引项）</p>
-<p>​    4.<font color="red">散列存储结构：</font>根据结点的关键字直接计算出该结点的存储地址</p>
-<p><strong>逻辑结构和存储结构之间的关系：</strong></p>
-<ul>
-<li>存储结构是逻辑关系的映像与元素本身的映像</li>
-<li>逻辑结构是数据结构的抽象，存储结构是数据结构的实现</li>
-<li>两者综合起来建立了数据元素之间的结构关系</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>数据类型(Data Type):是指一组性质相同的<font color="red">值的集合</font>及定义在此集合上的<font color="red">一组操作</font>的总称</p>
-<blockquote>
-<p>数据类型 = 值的集合 + 值集合上的一组操作</p>
-</blockquote>
-<p><strong>在C语言中，按照取值的不同，可以分为两类：</strong></p>
-<ul>
-<li>原子类型：是不可以再分解的基本类型，包括整型、实型、字符型等</li>
-<li>结构类型：有若干个类型集合而成，是可以再分解的。例如，整型数组是由若干整型数据组成的</li>
-</ul>
-<h4 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h4><mark class="hl-label red">抽象是指抽取出事物具有的普遍性的本质。</mark> 
-
-<p>通过对已有的数据类型进行抽象得到。</p>
-<p>抽象数据类型（Abstract Data Type, ADT）：是指一个数学模型及定义在该模型上的一组操作。</p>
-<ul>
-<li>由用户定义，从问题中抽象出<font color="red">数据模型</font>（逻辑结构）。</li>
-<li>还包括定义在数据模型上的一组<font color="red">抽象运算</font>（相关操作）。</li>
-</ul>
-<p><strong>抽象数据类型的形式定义：</strong></p>
-<p>抽象数据类型可以用（D，S，P）<font color="red">三元组</font>表示。</p>
-<p>其中：D是数据对象；</p>
-<p>​            S是D上的关系集；</p>
-<p>​            P是对D的基本操作集。</p>
-<p><strong>抽象数据类型的定义格式如下：</strong></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">&#123;</span><br><span class="line">	数据对象：&lt;数据对象的定义&gt;		<span class="comment">//其中，数据对象和数据关系用伪代码描述</span></span><br><span class="line">	数据关系：&lt;数据关系的定义&gt;		<span class="comment">//基本操作的定义格式为：</span></span><br><span class="line">	基本操作：&lt;基本操作的定义&gt;		<span class="comment">// 基本操作名（参数表）</span></span><br><span class="line">&#125;ADT 抽象数据类型名			   <span class="comment">// 初始条件：&lt;初始条件描述&gt;</span></span><br><span class="line">    							<span class="comment">// 操作结果：&lt;操作结果描述&gt;                     </span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>基本操作</strong>定义格式说明：</p>
-<p>参数表：赋值参数 只为操作提供输入值</p>
-<p>​                引用参数 以&amp;打头，除可提供输入值外，还将返回操作结果</p>
-<p>初始条件：描述操作执行之前数据结构和参数应满足的条件，若不满足，则操作失败，并返回相应出错信息。若初始条件为空，则省略之。</p>
-<p>操作结果：说明操作正常完成之后，数据结构的变化状况和应返回的结果。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">Data</span><br><span class="line">	数据对象的定义</span><br><span class="line">	数据元素之间逻辑关系的定义</span><br><span class="line">Operation</span><br><span class="line">	操作1</span><br><span class="line">		初始条件</span><br><span class="line">		操作结果描述</span><br><span class="line">	操作2</span><br><span class="line">		...</span><br><span class="line">	操作n</span><br><span class="line">		...</span><br><span class="line">		</span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a><center>算法</center></h2><p><strong>数据额结构和算法的关系是相互依赖不可分割的。</strong></p>
-<h3 id="🎈算法定义"><a href="#🎈算法定义" class="headerlink" title="🎈算法定义"></a>🎈算法定义</h3><p>算法是解决特定问题<strong>求解方法和步骤</strong>的描述，在计算机中表现为<font color="red">指令</font>的有限<font color="red">序列</font>，并且每条指令表示一个或多个操作。</p>
-<p><strong>算法的描述：</strong></p>
-<ul>
-<li>自然语言：中文、英语</li>
-<li>流程图</li>
-<li>伪代码</li>
-<li>程序代码</li>
-</ul>
-<p><strong>算法与程序：</strong></p>
-<p><strong>算法</strong>是解决问题的一种方法或一个过程，考虑如何将输入转换成输出，一个问题可以有多种算法</p>
-<p><strong>程序</strong>是用某种程序设计语言对算法的具体实现</p>
-<blockquote>
-<p>程序 = 数据结构 + 算法</p>
-</blockquote>
-<h3 id="🎈算法的特性"><a href="#🎈算法的特性" class="headerlink" title="🎈算法的特性"></a>🎈算法的特性</h3><h4 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h4><ul>
-<li>算法具有零个或多个输入</li>
-<li>算法至少有一个或多个输出</li>
-</ul>
-<h4 id="有穷性"><a href="#有穷性" class="headerlink" title="有穷性"></a>有穷性</h4><p>算法在执行有穷步之后结束，并且每一个步骤在有穷的时间内完成。</p>
-<h4 id="确定性"><a href="#确定性" class="headerlink" title="确定性"></a>确定性</h4><p>算法的每一步骤都具有确定的含义，不会出现二义性，任何条件下只有唯一的一条执行路径，即对于相同的输入只能得到相同的输出。</p>
-<h4 id="可行性"><a href="#可行性" class="headerlink" title="可行性"></a>可行性</h4><p>算法是可执行的，算法描述的操作可以通过已经实现的基本操作执行有限次来实现。</p>
-<h3 id="🎈算法设计的要求"><a href="#🎈算法设计的要求" class="headerlink" title="🎈算法设计的要求"></a>🎈算法设计的要求</h3><h4 id="正确性"><a href="#正确性" class="headerlink" title="正确性"></a>正确性</h4><p>算法的正确性是指算法至少应该具有输入、输出和加工处理无歧义性、能正确反映问题的需求、能够得到问题的正确答案。</p>
-<p>可以分为四个层次：</p>
-<ol>
-<li>算法程序<font color="red">不含语法错误</font></li>
-<li>算法程序对于<font color="red">几组输入数据</font>能够产生满足要求的输出结果。</li>
-<li>算法程序对于<font color="red">精心选择的、典型、苛刻且带有刁难性的</font>几组输入数据能够得出满足要求的结果。</li>
-<li>算法程序对于<font color="red">一切合法的输入数据</font>都有满足要求的输出结果。</li>
-</ol>
-<p>一般情况下，把<font color="red">第三层</font>作为衡量一个算法是否合格的标准。同时，一个好的算法还要容易理解。</p>
-<h4 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h4><p>算法设计的另一目的是为了便于阅读、理解和交流。隐晦难读的算法易于隐藏较多错误难以调试</p>
-<h4 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h4><ul>
-<li>当<font color="red">输入非法数据</font>时，算法也能恰当做出反应和处理，而不是产生异常或莫名奇妙的结果。</li>
-<li>处理出错的方法，不应该是中断程序的执行，而应返回一个表示错误或错误属性的值，以便在更高的抽象层次上进行处理。</li>
-</ul>
-<h4 id="时间效率高和存储量低"><a href="#时间效率高和存储量低" class="headerlink" title="时间效率高和存储量低"></a>时间效率高和存储量低</h4><p>设计算法应该尽量满足时间效率高和存储量低的需求。</p>
-<h3 id="🎈算法效率的度量方法"><a href="#🎈算法效率的度量方法" class="headerlink" title="🎈算法效率的度量方法"></a>🎈算法效率的度量方法</h3><p><strong>算法效率从以下两个方面来考虑：</strong></p>
-<p><font color="red">1.时间效率： </font>指的是算法所耗费的时间</p>
-<p><font color="red">2.空间效率：</font>指的是算法执行过程中所耗费的存储空间</p>
-<p><strong>时间效率和空间效率有时候是矛盾的</strong></p>
-<h4 id="事后统计方法"><a href="#事后统计方法" class="headerlink" title="事后统计方法"></a>事后统计方法</h4><p>将算法实现，测试其时间和空间开销。缺陷：编写程序耗费较多的时间和精力；所得实验结果依赖于计算机的软硬件等环境因素，掩盖算法本身的优劣。</p>
-<h4 id="事前分析估算方法"><a href="#事前分析估算方法" class="headerlink" title="事前分析估算方法"></a>事前分析估算方法</h4><p><strong><font color="red">算法运行时间指算法中每条语句的频度之和（假设每条语句时间为单位时间）</font></strong></p>
-<p>在计算机程序编制前，依据统计方法对算法进行估算。</p>
-<p>程序在计算机上运行时所消耗的时间取决于下列因素：</p>
-<ol>
-<li>算法采用的策略、方法</li>
-<li>编译产生的代码质量</li>
-<li>问题的输入规模</li>
-<li>机器指令执行的速度</li>
-</ol>
-<blockquote>
-<p>抛开软件和硬件的因素，一个程序的运行时间，依赖于<strong>算法的好坏和问题的输入规模</strong>。问题输入规模是指输入量的多少。</p>
-</blockquote>
-<p><strong>在分析程序的运行时间时，最重要的是把程序看成是独立于程序设计语言的算法或一系列步骤。</strong></p>
-<h3 id="🎈函数的渐近增长"><a href="#🎈函数的渐近增长" class="headerlink" title="🎈函数的渐近增长"></a>🎈函数的渐近增长</h3><blockquote>
-<p>定义：给定两个函数f（n）和g（n），如果存在一个整数N，是的对于所有n&gt;N，f（n）总是比g（n）大，那么，我们说f（n）的增长渐近快于g（n）。</p>
-</blockquote>
-<p>结论：判断一个算法的效率时，函数中的常数和其他次要项常常可以忽略，而更应该关注主项（最高阶项）的阶数。</p>
-<h3 id="🎈算法时间复杂度"><a href="#🎈算法时间复杂度" class="headerlink" title="🎈算法时间复杂度"></a>🎈算法时间复杂度</h3><h4 id="算法时间复杂度定义"><a href="#算法时间复杂度定义" class="headerlink" title="算法时间复杂度定义"></a>算法时间复杂度定义</h4><blockquote>
-<p>在进行算法分析时，语句总的执行次数T（n）是关于问题规模n的函数，进而分析T（n）随n的变化情况并确定T（n）的数量级。算法的时间复杂度，也就是算法的时间量度，记作 T(n)=O(f(n)) 。它表示随问题规模n的增大，算法执行时间的增长率和f（n）的增长率相同，称作<font color="red"><strong>渐进时间复杂度</strong></font>，简称为时间复杂度。一般情况下，不必计算所有操作的 执行次数，而只考虑算法中<strong>基本操作</strong>执行的次数，它是问题规模n的某个函数，用T（n）表示。</p>
-</blockquote>
-<p>这样用大写 O() 来体现算法时间复杂度的记法，称之为大O记法。</p>
-<p>一般情况下，随着n的增大，T（n）增长最慢的算法为最优算法。</p>
-<p><strong>分析算法时间复杂度的基本方法：</strong></p>
-<ol>
-<li>找出<font color="red">语句频度最大</font>的那条语句作为<font color="red">基本语句</font></li>
-<li>计算<font color="red">基本语句</font>的频度得到问题规模n的某个函数f（n）</li>
-<li>取其数量级用符号“O”表示</li>
-</ol>
-<h4 id="推导大O阶方法"><a href="#推导大O阶方法" class="headerlink" title="推导大O阶方法"></a>推导大O阶方法</h4><ol>
-<li>用常数1取代运行时间中的所有加法常数。</li>
-<li>在修改后的运行次数函数中，只保留最高阶项</li>
-<li>如果最高阶项存在且不是1，则去除与这个项相乘的常数</li>
-<li>得到的结果就是大O阶</li>
-</ol>
-<h4 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h4><p>如果一个算法，无论n为多少，上面的两端代码执行的次数是不变的。这种与问题的大小无关（n的多少），执行时间恒定的算法，我们称之为具有O（1）的时间复杂度，又叫常数阶。</p>
-<mark class="hl-label red">即执行次数恒定，不会随着n的变大而发生变化</mark> 
-
-<h4 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h4><p>要确定某个算法的阶次，我们常常要确定某个特定语句或者某个语句集运行的次数。因此，我们要<strong>分析算法的复杂度，关键就是要分析循环结构的运行情况</strong>。</p>
-<p>下面这段代码，它的循环的时间复杂度为O（n），因为循环体中的代码需要执行n次。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(count &lt; n)</span><br><span class="line">&#123;</span><br><span class="line">	count = count * <span class="number">2</span>;</span><br><span class="line">	<span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>有多少个2相乘后大于n，就会退出循环。由 2<sup>x</sup>=n 得到 x=log<sub>2</sub>n 。所以这个循环的时间复杂度为 O(log<sub>n</sub>) 。</p>
-<h4 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; J++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>它的内循环的时间复杂度为O（n），而它的外循环是对于内部时间复杂度为O（n）的语句，再循环n次。所以它的时间复杂度为O（n<sup>2</sup>）。</p>
-<p>如果外循环的循环次数改成了m，那么时间复杂度就变为O（m*n）。</p>
-<p>总结得出，<font color="red">循环的时间复杂度等于循环体的复杂度乘以该循环运行的次数</font>。</p>
-<p>对于下面这个循环嵌套：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> (j = i; j &lt; n; j++) <span class="comment">/* 注意int j = i 而不是0 */</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">/* 时间复杂度为O（1）的程序步骤序列 */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>当i=0时，内循环执行了n次，当i=1时，内循环执行了n-1次，……当i=n-1时，执行了1次。所以总执行次数为：</p>
-<center>n+(n-1)+(n-2)+···+1=n(n+1)/2+n/2</center>
-
-<p>用推导大O阶的方法，得出这段代码的时间复杂度为O（n<sup>2</sup>）。</p>
-<h4 id="算法的加法法则和乘法法则"><a href="#算法的加法法则和乘法法则" class="headerlink" title="算法的加法法则和乘法法则"></a>算法的加法法则和乘法法则</h4><ul>
-<li><p>加法法则</p>
-<p>T(n) = T1(n) + T2(n) = O(f(n)) + O(g(n)) = O( max ( f(n) , g(n) ) )</p>
-</li>
-<li><p>乘法法则</p>
-<p>T(n) = T1(n) * T2(n) = O(f(n)) + O(g(n)) = O( f(n) * g(n) )</p>
-</li>
-</ul>
-<h4 id="🎈常用的时间复杂度"><a href="#🎈常用的时间复杂度" class="headerlink" title="🎈常用的时间复杂度"></a>🎈常用的时间复杂度</h4><table>
-<thead>
-<tr>
-<th align="center">执行次数函数</th>
-<th align="center">阶</th>
-<th align="center">非正式术语</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">12</td>
-<td align="center">O（1）</td>
-<td align="center">常数阶</td>
-</tr>
-<tr>
-<td align="center">2n+3</td>
-<td align="center">O（n）</td>
-<td align="center">线性阶</td>
-</tr>
-<tr>
-<td align="center">3n<sup>2</sup>+2n+1</td>
-<td align="center">O（n<sup>2</sup>）</td>
-<td align="center">平方阶</td>
-</tr>
-<tr>
-<td align="center">5log<sub>2</sub>n+20</td>
-<td align="center">O（log<sub>2</sub>n）</td>
-<td align="center">对数阶</td>
-</tr>
-<tr>
-<td align="center">2n+3nlog<sub>2</sub>n+19</td>
-<td align="center">O（nlog<sub>2</sub>n）</td>
-<td align="center">nlog<sub>2</sub>n阶</td>
-</tr>
-<tr>
-<td align="center">6n<sup>3</sup>+2n<sup>2</sup>+3n+4</td>
-<td align="center">O（n<sup>3</sup>）</td>
-<td align="center">立方阶</td>
-</tr>
-<tr>
-<td align="center">2<sup>n</sup></td>
-<td align="center">O（2<sup>n</sup>）</td>
-<td align="center">指数阶</td>
-</tr>
-</tbody></table>
-<p>常用的时间复杂度所耗费的时间从小到大依次是：</p>
-<blockquote>
-<p>O（1）&lt;O（log<sub>2</sub>n）&lt; O（n）&lt;O（nlog<sub>2</sub>n）&lt;O（n<sup>2</sup>）&lt;O（n<sup>3</sup>）&lt;O（2<sup>n</sup>）&lt;O（n！）&lt;O（n<sup>n</sup>）</p>
-</blockquote>
-<h3 id="🎈最坏情况与平均情况"><a href="#🎈最坏情况与平均情况" class="headerlink" title="🎈最坏情况与平均情况"></a>🎈最坏情况与平均情况</h3><ul>
-<li><strong>最坏情况运行时间是一种保证，那就是运行时间将不会再坏了。在应用中，这是一种最重要的需求，通常，除非特别指定，我们提到的运行时间都是最坏情况的运行时间。</strong></li>
-<li>平均运行时间是所有情况中最有意义的，因为它是期望的运行时间。（一般通过运行一定数量的实验数据后估算出来的）</li>
-</ul>
-<h3 id="🎈算法空间复杂度"><a href="#🎈算法空间复杂度" class="headerlink" title="🎈算法空间复杂度"></a>🎈算法空间复杂度</h3><p>算法的空间复杂度通过计算算法所需的存储空间实现，算法空间复杂度的计算公式记作： S(n) = O(f(n)) ，其中，n为问题的规模，f（n）为语句关于n所占存储空间的函数。</p>
-<p><strong>算法要占据的空间：</strong></p>
-<ul>
-<li>算法本身要占据的空间，输入/输出，指令，常数，变量等</li>
-<li>算法要使用<font color="red">辅助空间</font></li>
-</ul>
-<hr>
-<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><center>线性表</center></h2><h3 id="🎵线性表的定义和特点"><a href="#🎵线性表的定义和特点" class="headerlink" title="🎵线性表的定义和特点"></a>🎵线性表的定义和特点</h3><p><strong>线性表(Linear List):</strong></p>
-<ul>
-<li>由n个数据元素（结点）组成的<font color="red">有限序列</font></li>
-<li>其中数据元素的个数n定义为表的长度</li>
-<li>当n=0时称为空表</li>
-<li>数据元素ai只是一个抽象的符号，其具体含义在不同的情况下可以不同</li>
-</ul>
-<p><font color="red">同一线性表中的元素必定具有相同特征，数据元素间的关系是线性关系</font></p>
-<p><strong>线性表的逻辑特征是：</strong></p>
-<ol>
-<li>非空的线性表有且只有一个开始结点，它没有直接前驱，而且仅有一个直接后继</li>
-<li>有且只有一个终端结点，它没有直接后继，而仅有一个直接前驱</li>
-<li>其余的内部结点有且只有一个直接前驱和一个直接后继</li>
-</ol>
-<p><font color="red">线性表是一种典型的线性结构</font></p>
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
