@@ -43,6 +43,90 @@
       </tags>
   </entry>
   <entry>
+    <title>c++</title>
+    <url>/2021/08/05/c/</url>
+    <content><![CDATA[<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><hr>
+<h3 id="c和c-的区别"><a href="#c和c-的区别" class="headerlink" title="c和c++的区别"></a>c和c++的区别</h3><ul>
+<li>c是面向过程</li>
+<li>c++是面向对象</li>
+</ul>
+<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><ul>
+<li><p>类是抽象的概念，用于创造对象（比如<strong>狗</strong>这个类）</p>
+</li>
+<li><p>对象是类的实例，是类的具体化，是客观世界真实存在的实体（狗可以分成吉娃娃、萨摩耶等）</p>
+<mark class="hl-label red">面向对象的编程：OOP</mark> </li>
+</ul>
+<p><strong>类实际上就是将数据和操作数据的方法封装合并在一起</strong></p>
+<h3 id="c-泛型编程"><a href="#c-泛型编程" class="headerlink" title="c++泛型编程"></a>c++泛型编程</h3><p>​    强调独立于特定数据类型。对语言进行扩展，实现只编写一个函数，即可以运用于各种实际类型。</p>
+<h3 id="编程步骤"><a href="#编程步骤" class="headerlink" title="编程步骤"></a>编程步骤</h3><ol>
+<li>写源代码</li>
+<li>编译</li>
+<li>经过编译形成目标文件（object）</li>
+<li>链接程序</li>
+<li>经过链接形成可执行文件</li>
+</ol>
+<h2 id="开始学习C"><a href="#开始学习C" class="headerlink" title="开始学习C++"></a>开始学习C++</h2><hr>
+<h3 id="进入C"><a href="#进入C" class="headerlink" title="进入C++"></a>进入C++</h3><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Come up and C++ me some time.&quot;</span>;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;You won&#x27;t regret it!&quot;</span>&lt;&lt;endl;</span><br><span class="line">	cin.<span class="built_in">get</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>预处理器编译指令#include</li>
+<li>函数头：int main（）</li>
+<li>编译指令：using namespace</li>
+</ul>
+<h4 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	statements</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这几行代码构成函数定义。第一行叫做函数头，中间的部分叫做函数体。每条完整的指令都称为语句。<font color="red">在C++中，所有的语句都以分号结束，不能省略。</font>最后一条语句叫做返回语句，它结束该函数。</p>
+<p>main函数的函数头描述的是main（）和操作系统之间的接口。</p>
+<p>如果编译器到达main（）函数末尾时没有遇到返回语句，则认为main（）函数以如下语句结尾：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="C-注释"><a href="#C-注释" class="headerlink" title="C++注释"></a>C++注释</h4><p>C++注释以//开头，到行尾结束</p>
+<p>C++也能识别C注释，C注释包括在符号 /* 和 */ 之间:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">/* a C-style comment */</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="C-预处理器和iostream文件"><a href="#C-预处理器和iostream文件" class="headerlink" title="C++预处理器和iostream文件"></a>C++预处理器和iostream文件</h4><p>如果要使用C++输入<strong>或</strong>输出工具，使用以下两行代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
+
+<p>使用预处理器使程序在进行主编译之前对源文件进行处理</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>该编译指令导致预处理器将iostream文件的内容添加到程序中。这样做的<font color="red">目的</font>是：iostream中有多个定义，使用cin和cout来输入和输出信息需要用到这些定义。#include编译指令导致iostream文件的内容隋源代码文件的内容一起被发送给编译器。<font color="red">实际上，原始文件没有被修改，而是将源代码文件和iostream组合成一个复合文件，编译的下一阶段将使用该文件。</font></p>
+<h4 id="头文件名"><a href="#头文件名" class="headerlink" title="头文件名"></a>头文件名</h4><p>像iostream这样的文件叫做包含文件（include file）。C语言的传统是，头文件使用扩展名.h。而在C++去掉了扩展名h（但仍可以使用这种文件），并在文件名前面加上前缀c。比如C++版本的math.h为cmath</p>
+<h4 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h4><p>如果使用iostream而不是iostream.h，则应使用下面的名称空间编译指令来使iostream中的定义对程序可用：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
+
+<p>叫做using编译指令。</p>
+<p>名称空间支持目的是在编写大型程序以及多个厂商现有的代码组合起来的程序时更容易，有助于组织程序。在面对多个厂商的不同封装产品时，使用名称空间可以区分不同的版本。</p>
+<mark class="hl-label pink">可以把std的部分看成一个公司名称</mark> 
+
+<p>按照这种方式，类、函数和变量是C++编译器的标准组件，它们都被放置在名称空间std中（当且仅当头文件没有扩展名h时）。这意味着在iostream中定义的用于输出的cout变量实际上是std::out，而endl实际上是std::endl。因此可以省略编译指令using，用如下方式进行编码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="string">&quot;Come up and C++ me some time.&quot;</span>;</span><br><span class="line">std::cout&lt;&lt;std::endl;</span><br></pre></td></tr></table></figure>
+
+<p>更好的方法是，只使所需的名称可用，通过using声明来实现：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"><span class="keyword">using</span> std::endl;</span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用cout进行C-输出"><a href="#使用cout进行C-输出" class="headerlink" title="使用cout进行C++输出"></a>使用cout进行C++输出</h4><p>&lt;&lt;符号表示该语句将把这个字符串发送给cout;该符号指出了信息流动的路径。</p>
+<p>从C++概念上来看，输出是从程序流出的一系列字符。cout对象表示这种流，cout的对象属性包括一个插入运算符（&lt;&lt;），它可以将其右侧的信息插入到流中。</p>
+<ol>
+<li><p>控制符endl</p>
+<p>表示重启一行。诸如endl等对于cout来说有特殊含义的特殊符号被称为控制符。和cout一样，endl也是在头文件iostream中定义的，且位于名称期间std中。</p>
+</li>
+<li><p>换行符</p>
+<p>另一种换行的旧式方法：C语言符号\n:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">&quot;What&#x27;s next?\n&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p><font color="red">两者之间的区别：</font>endl确保程序继续运行前刷新输出（将其立刻显示在屏幕上）；而\n不能保证。</p>
+</li>
+</ol>
+<h3 id="C-语句"><a href="#C-语句" class="headerlink" title="C++语句"></a>C++语句</h3>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++by黑马</title>
     <url>/2021/08/06/c-by%E9%BB%91%E9%A9%AC/</url>
     <content><![CDATA[<h2 id="C-基础入门"><a href="#C-基础入门" class="headerlink" title="C++基础入门"></a>C++基础入门</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>作用：用于记录程序中不可更改的数据</p>
@@ -190,88 +274,13 @@
       </tags>
   </entry>
   <entry>
-    <title>c++</title>
-    <url>/2021/08/05/c/</url>
-    <content><![CDATA[<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><hr>
-<h3 id="c和c-的区别"><a href="#c和c-的区别" class="headerlink" title="c和c++的区别"></a>c和c++的区别</h3><ul>
-<li>c是面向过程</li>
-<li>c++是面向对象</li>
-</ul>
-<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><ul>
-<li><p>类是抽象的概念，用于创造对象（比如<strong>狗</strong>这个类）</p>
-</li>
-<li><p>对象是类的实例，是类的具体化，是客观世界真实存在的实体（狗可以分成吉娃娃、萨摩耶等）</p>
-<mark class="hl-label red">面向对象的编程：OOP</mark> </li>
-</ul>
-<p><strong>类实际上就是将数据和操作数据的方法封装合并在一起</strong></p>
-<h3 id="c-泛型编程"><a href="#c-泛型编程" class="headerlink" title="c++泛型编程"></a>c++泛型编程</h3><p>​    强调独立于特定数据类型。对语言进行扩展，实现只编写一个函数，即可以运用于各种实际类型。</p>
-<h3 id="编程步骤"><a href="#编程步骤" class="headerlink" title="编程步骤"></a>编程步骤</h3><ol>
-<li>写源代码</li>
-<li>编译</li>
-<li>经过编译形成目标文件（object）</li>
-<li>链接程序</li>
-<li>经过链接形成可执行文件</li>
-</ol>
-<h2 id="开始学习C"><a href="#开始学习C" class="headerlink" title="开始学习C++"></a>开始学习C++</h2><hr>
-<h3 id="进入C"><a href="#进入C" class="headerlink" title="进入C++"></a>进入C++</h3><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Come up and C++ me some time.&quot;</span>;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;You won&#x27;t regret it!&quot;</span>&lt;&lt;endl;</span><br><span class="line">	cin.<span class="built_in">get</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>预处理器编译指令#include</li>
-<li>函数头：int main（）</li>
-<li>编译指令：using namespace</li>
-</ul>
-<h4 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	statements</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这几行代码构成函数定义。第一行叫做函数头，中间的部分叫做函数体。每条完整的指令都称为语句。<font color="red">在C++中，所有的语句都以分号结束，不能省略。</font>最后一条语句叫做返回语句，它结束该函数。</p>
-<p>main函数的函数头描述的是main（）和操作系统之间的接口。</p>
-<p>如果编译器到达main（）函数末尾时没有遇到返回语句，则认为main（）函数以如下语句结尾：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="C-注释"><a href="#C-注释" class="headerlink" title="C++注释"></a>C++注释</h4><p>C++注释以//开头，到行尾结束</p>
-<p>C++也能识别C注释，C注释包括在符号 /* 和 */ 之间:</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">/* a C-style comment */</span></span></span><br></pre></td></tr></table></figure>
-
-<h4 id="C-预处理器和iostream文件"><a href="#C-预处理器和iostream文件" class="headerlink" title="C++预处理器和iostream文件"></a>C++预处理器和iostream文件</h4><p>如果要使用C++输入<strong>或</strong>输出工具，使用以下两行代码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-
-<p>使用预处理器使程序在进行主编译之前对源文件进行处理</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>该编译指令导致预处理器将iostream文件的内容添加到程序中。这样做的<font color="red">目的</font>是：iostream中有多个定义，使用cin和cout来输入和输出信息需要用到这些定义。#include编译指令导致iostream文件的内容隋源代码文件的内容一起被发送给编译器。<font color="red">实际上，原始文件没有被修改，而是将源代码文件和iostream组合成一个复合文件，编译的下一阶段将使用该文件。</font></p>
-<h4 id="头文件名"><a href="#头文件名" class="headerlink" title="头文件名"></a>头文件名</h4><p>像iostream这样的文件叫做包含文件（include file）。C语言的传统是，头文件使用扩展名.h。而在C++去掉了扩展名h（但仍可以使用这种文件），并在文件名前面加上前缀c。比如C++版本的math.h为cmath</p>
-<h4 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h4><p>如果使用iostream而不是iostream.h，则应使用下面的名称空间编译指令来使iostream中的定义对程序可用：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-
-<p>叫做using编译指令。</p>
-<p>名称空间支持目的是在编写大型程序以及多个厂商现有的代码组合起来的程序时更容易，有助于组织程序。在面对多个厂商的不同封装产品时，使用名称空间可以区分不同的版本。</p>
-<mark class="hl-label pink">可以把std的部分看成一个公司名称</mark> 
-
-<p>按照这种方式，类、函数和变量是C++编译器的标准组件，它们都被放置在名称空间std中（当且仅当头文件没有扩展名h时）。这意味着在iostream中定义的用于输出的cout变量实际上是std::out，而endl实际上是std::endl。因此可以省略编译指令using，用如下方式进行编码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="string">&quot;Come up and C++ me some time.&quot;</span>;</span><br><span class="line">std::cout&lt;&lt;std::endl;</span><br></pre></td></tr></table></figure>
-
-<p>更好的方法是，只使所需的名称可用，通过using声明来实现：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"><span class="keyword">using</span> std::endl;</span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用cout进行C-输出"><a href="#使用cout进行C-输出" class="headerlink" title="使用cout进行C++输出"></a>使用cout进行C++输出</h4><p>&lt;&lt;符号表示该语句将把这个字符串发送给cout;该符号指出了信息流动的路径。</p>
-<p>从C++概念上来看，输出是从程序流出的一系列字符。cout对象表示这种流，cout的对象属性包括一个插入运算符（&lt;&lt;），它可以将其右侧的信息插入到流中。</p>
-<ol>
-<li><p>控制符endl</p>
-<p>表示重启一行。诸如endl等对于cout来说有特殊含义的特殊符号被称为控制符。和cout一样，endl也是在头文件iostream中定义的，且位于名称期间std中。</p>
-</li>
-<li><p>换行符</p>
-<p>另一种换行的旧式方法：C语言符号\n:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">&quot;What&#x27;s next?\n&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p><font color="red">两者之间的区别：</font>endl确保程序继续运行前刷新输出（将其立刻显示在屏幕上）；而\n不能保证。</p>
-</li>
-</ol>
-<h3 id="C-语句"><a href="#C-语句" class="headerlink" title="C++语句"></a>C++语句</h3>]]></content>
+    <title>firstpost</title>
+    <url>/2021/07/28/firstpost/</url>
+    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello, world!"></a>Hello, world!</h2><p>here is my first post.</p>
+]]></content>
       <categories>
-        <category>学习</category>
+        <category>篮球</category>
       </categories>
-      <tags>
-        <tag>c++</tag>
-      </tags>
   </entry>
   <entry>
     <title>ttt</title>
@@ -279,15 +288,6 @@
     <content><![CDATA[]]></content>
       <categories>
         <category>学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>firstpost</title>
-    <url>/2021/07/28/firstpost/</url>
-    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello, world!"></a>Hello, world!</h2><p>here is my first post.</p>
-]]></content>
-      <categories>
-        <category>篮球</category>
       </categories>
   </entry>
   <entry>
