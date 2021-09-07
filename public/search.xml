@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>anotest</title>
-    <url>/2021/07/29/anotest/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>唱歌</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Everyday Routine</title>
     <url>/2021/08/02/ER/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误哦~" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -37,21 +29,17 @@
       </categories>
   </entry>
   <entry>
-    <title>ttt</title>
-    <url>/2021/08/02/ttt/</url>
+    <title>anotest</title>
+    <url>/2021/07/29/anotest/</url>
     <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
+      <tags>
+        <tag>唱歌</tag>
+      </tags>
   </entry>
   <entry>
-    <title>唱歌</title>
-    <url>/2021/08/07/%E5%94%B1%E6%AD%8C/</url>
-    <content><![CDATA[<p>测试</p>
-]]></content>
-      <categories>
-        <category>唱歌</category>
-      </categories>
+    <title>test</title>
+    <url>/2021/09/07/test/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>关于蕾塞</title>
@@ -77,7 +65,7 @@
     <title>哲学</title>
     <url>/2021/08/03/%E5%93%B2%E5%AD%A6/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误哦~" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="81be9710149ef9234156cbb246ac478396631be40f2ce83d14338758860ba588">6adc09e8c8e9d40ea8a65820195e72f5d2211c110ca832f00b30372d11ea69678b253f23f6e79712abadfa67486bd0591da4ba7eb6b56ea5cdd9def7175751f7</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="f2827d23a9f0e36abdaed027bd0dc2eb862c026f8035bfd07c6b7a7a026aff31">6adc09e8c8e9d40ea8a65820195e72f53de78c023eb2d954a9a68907c51883b52a8991b93bea457abe02a90c6057a1082b6c24f061c8411f0a0fad748408cbf488b1533484c3184b34b527086a85d46d</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -90,6 +78,15 @@
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>感悟</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>唱歌</title>
+    <url>/2021/08/07/%E5%94%B1%E6%AD%8C/</url>
+    <content><![CDATA[<p>测试</p>
+]]></content>
+      <categories>
+        <category>唱歌</category>
       </categories>
   </entry>
   <entry>
@@ -116,6 +113,14 @@
     <content><![CDATA[]]></content>
       <categories>
         <category>阅读</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ttt</title>
+    <url>/2021/08/02/ttt/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>学习</category>
       </categories>
   </entry>
   <entry>
@@ -1917,7 +1922,11 @@
 
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pre</span><span class="params">(BiTree T)</span></span>&#123;			<span class="comment">//例子</span></span><br><span class="line">	<span class="keyword">if</span>(T!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">		cout&lt;&lt;T-&gt;data;</span><br><span class="line">		<span class="built_in">pre</span>(T-&gt;lchild);</span><br><span class="line">		<span class="built_in">pre</span>(T-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
+
+
+
+
+<h5 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h5>]]></content>
       <categories>
         <category>学习</category>
       </categories>
