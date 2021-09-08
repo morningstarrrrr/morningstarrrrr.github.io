@@ -1105,7 +1105,7 @@ C++认为万事万物都是对象，对象上有其属性和行为
 
 
 
-**封装意义1**
+##### **封装意义1**
 
 ​	在设计类的时候，行为和属性写在一起，表现事务
 
@@ -1125,7 +1125,9 @@ class Circle{
     //访问权限-公共权限
     public:
     
-    //属性
+    //类中的属性和行为，统一称为 成员
+    //属性	成员属性 成员变量
+    //行为	成员函数 成员方法
     int m_r;
     
     //行为
@@ -1148,3 +1150,160 @@ int main(){
 }
 ```
 
+
+
+##### **封装意义2**
+
+类在设计时，可以把属性和行为放在不同的权限下，加以控制
+
+访问权限有三种：
+
+1. public 		公共权限
+2. protected   保护权限
+3. private        私有权限
+
+
+
+示例：
+
+```c++
+//公共权限 public 		成员 类内可以访问 类外可以访问
+//保护权限 protected	成员 类内可以访问 类外不可以访问 儿子可以访问父亲中保护内容
+//私有权限 private 		成员 类内可以访问 类外不可以访问 儿子不可以访问父亲中私有内容
+
+class Person{
+Public:   
+    //公共权限
+    string m_Name;	//姓名
+    
+Protected:
+    //保护权限
+    string m_car;	//汽车
+    
+Private:
+    //私有权限
+    int password;	//密码
+    
+Public:
+    void func(){
+        m_Name = "张三";
+        m_Car = "比亚迪";
+        m_password = "123456";
+    }
+};
+
+int main(){
+    //实例化一个具体的对象
+    Person p1;
+    p1.m_Name = "李四";		//可以访问
+    //p1.m_Car = "奔驰";		//此时错误，保护权限在类外不可以访问
+    //p1.m_password = "123";		//错误
+}
+```
+
+
+
+
+
+#### struct和class的区别
+
+在C++中struct和class的唯一区别就在于 **默认的访问权限不同**
+
+区别：
+
+* struct默认权限为公共
+* class默认权限为私有
+
+```c++
+class C1{
+  int m_A;	//默认权限为私有  
+};
+
+struct C2{
+    int m_A;	//默认权限为公共
+};
+
+int main(){
+    C1 c1;
+    //c1.m_A = 100;	//错误,权限为私有
+    C2 c2;
+    c2.m_A = 100;	//正确，权限为公共
+}
+```
+
+
+
+
+
+#### 成员属性设置为私有
+
+**优点1：**将所有成员属性设置为私有，可以自己设置读写权限
+
+**优点2：**对于写权限，我们可以检测数据的有效性
+
+
+
+示例：
+
+```c++
+class Person{
+Public:
+    
+    //设置姓名
+    void setName(string name){
+        m_Name = name;
+    }
+    //获取姓名
+    string getName(){
+        return m_Name;
+    }
+    
+    //获取年龄 可读可写	如果想修改，年龄必须在0~150之间
+    int getAge(){
+        //m_Age = 0;	//初始化为0岁
+        return m_Age;
+    }
+    
+    //设置年龄
+    void setAge(int age){
+        if(age < 0 || age > 150){
+            m_Age = 0;
+            cout<<"年龄有误"<<endl;
+            return ;
+        }
+        m_Age = age;
+    }
+    
+    //设置情人 只写
+    void setLover(string lover){
+        m_Lover = lover;
+    }
+    
+Private:
+    //姓名	可读可写
+    String m_Name;
+    //年龄	只读
+    int m_Age;
+    //伴侣	只写
+    string m_Lover;
+};
+
+int main(){
+    Person p;
+    //p.m_Name = "张三";	//错误 私有权限不能访问
+    p.setName("张三");	//正确 公共权限函数访问
+    cout<<"姓名为："<<p.getName()<<endl;
+    
+    //p.m_Age = 18;		//错误 私有权限不能访问
+    //p.setAge(18);		//错误 没有这个函数		
+    cout<<"年龄为："<<p.getAge()<<endl; 
+    
+    //设置情人
+    p.setLover("李四");
+    //cout<<"情人为："<<p.m_Lover<<endl;	//错误 私有权限不能访问
+}
+```
+
+
+
+#### 
