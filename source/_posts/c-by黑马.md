@@ -1524,3 +1524,142 @@ void test03(){
 }
 ```
 
+
+
+
+
+##### 构造函数的调用规则
+
+默认情况下，c++编译器至少给类添加三个函数
+
+1.默认构造函数（无参，函数体为空）
+
+2.默认析构函数（无参，函数体为空）
+
+3.默认拷贝构造函数，对属性进行值拷贝
+
+
+
+构造函数调用规则：
+
+* 如果用户定义有参构造函数，c++不再提供默认无参构造，但是会提供默认拷贝构造
+* 如果用户定义拷贝构造函数，c++不再提供其他构造函数
+
+
+
+```c++
+//构造函数的调用规则
+//1.创建一个类，c++编译器会给每个类都添加至少三个函数
+//默认构造 （空实现）
+//析构函数 （空实现）
+//拷贝构造 （值拷贝）
+    
+//2.如果我们写了有参构造函数，编译器就不再提供默认构造，依然提供拷贝构造
+
+
+class Person{
+public:
+	Person()
+	{
+		cout << "Person的默认构造函数调用" << endl;
+	}
+
+	Person(int age)
+	{
+		cout << "Person的有参构造函数调用" << endl;
+		m_Age = age;
+	}
+
+	Person(const Person &p)
+	{
+		cout << "Person的拷贝构造函数调用" << endl;
+		m_Age = p.m_Age;
+	}
+
+	~Person()
+	{
+		cout << "Person的默认析构函数调用" << endl;
+	}
+
+	int m_Age;
+
+};
+
+void test01()
+{
+	Person p;
+	p.m_Age = 18;
+
+	Person p2(p);
+
+	cout << "p2的年龄是：" << p2.m_Age << endl;
+}
+
+
+void test02()
+{
+    Person p;	//如果有 有参构造函数定义，没有自己定义的默认构造函数，就会报错，因为
+    			//此时系统也不会提供默认构造函数
+    
+}
+```
+
+
+
+
+
+##### 深拷贝和浅拷贝
+
+浅拷贝：简单的赋值拷贝操作
+
+深拷贝：在堆区重新申请空间，进行拷贝操作
+
+
+
+```c++
+class Person{
+public:
+	Person()
+	{
+		cout << "Person的默认构造函数调用" << endl;
+	}
+
+	Person(int age, int height)
+	{
+		cout << "Person的有参构造函数调用" << endl;
+		m_Age = age;
+        m_Height = new int(height);
+	}
+
+	Person(const Person &p)
+	{
+		cout << "Person的拷贝构造函数调用" << endl;
+		m_Age = p.m_Age;
+	}
+
+	~Person()
+	{
+        //析构代码，将堆区开辟的数据做释放操作
+        if(m_Height != NULL)
+        {
+            delete m_Height;
+            m_Height = NULL;	//防止野指针出现
+        }
+		cout << "Person的默认析构函数调用" << endl;
+	}
+
+	int m_Age;
+    int *m_Height; //new新建开辟到堆区，用指针接收
+
+};
+
+void test01()
+{
+    Person p1(18,160);
+    cout<<"p1的年龄为:"<<p1.m_Age<<"  身高为:"<<p1.m_Height<<endl;
+    
+    Person p2(p1);
+    cout<<"p2的年龄为:"<<p2.m_Age<<"  身高为:"<<p2.m_Height<<endl;
+}
+```
+
