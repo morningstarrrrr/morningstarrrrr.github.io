@@ -1337,7 +1337,7 @@ void xxx::func(){	//xxx:: 说明是成员函数
 
 
 
-#### 对象的初始化和清理
+#### 对象特性
 
 C++中的面对对象来源于生活，每个对象有初始设置和对象销毁前的清理数据的设置
 
@@ -1630,12 +1630,23 @@ public:
 		m_Age = age;
         m_Height = new int(height);
 	}
+    
+    //自己实现拷贝构造函数 解决浅拷贝带来的问题
+    Person(const Person &p)
+    {
+        cout<< "Person 拷贝构造函数调用"<<endl;
+        m_Age = p.m_Age;
+        //m_Height = p.m_Height;	编译器默认实现就是这行代码
+        
+        //深拷贝操作
+        m_Height = new int(*p.m_Height);	//解引用来获得m_Height的值
+    }
 
-	Person(const Person &p)
-	{
-		cout << "Person的拷贝构造函数调用" << endl;
-		m_Age = p.m_Age;
-	}
+	//Person(const Person &p)
+	//{
+	//	  cout << "Person的拷贝构造函数调用" << endl;
+	//	  m_Age = p.m_Age;
+	//}
 
 	~Person()
 	{
@@ -1660,6 +1671,133 @@ void test01()
     
     Person p2(p1);
     cout<<"p2的年龄为:"<<p2.m_Age<<"  身高为:"<<p2.m_Height<<endl;
+    //此时会出错 默认拷贝函数将 int *m_Height 中的全部内容拷贝过去
+    //p2 和 p1 在函数运行结束后都会进行析构函数释放 m_Height 内存的操作 
+    //重复释放，非法操作
 }
 ```
+
+
+
+浅拷贝带来的问题就是堆区的内存重复释放
+
+<font color="red"> 浅拷贝的问题，要利用深拷贝来进行解决</font>，即给使用拷贝构造的函数也申请一块新的内存空间
+
+
+
+**总结：**
+
+<font color="red">如果属性有在堆区开辟的，一定要自己提供拷贝构造函数，防止浅拷贝带来的问题</font>
+
+
+
+
+
+##### 初始化列表
+
+作用：用来初始化属性
+
+
+
+**语法：**`` 构造函数():属性1(值1)，属性2(值2)...{}``
+
+```c++
+class Person
+{
+public:
+    //传统初始化操作
+    Person(int a, int b, int c)
+    {
+        m_A = a;
+        m_B = b;
+        m_C = c;
+    }
+    
+    int m_A;
+    int m_B;
+    int m_C;
+    
+    //初始化列表初始化属性
+    Person():m_A(10),m_B(20).m_C(30)
+    {
+        
+    }
+    
+    //更灵活的方式初始化列表初始化属性
+    Person(int a, int b, int c):m_A(a),m_B(b).m_C(c)
+    {
+        
+    }
+};
+
+	
+
+void test01(){
+    //Person p(10,20,30);	普通构造
+    Person p;				初始化列表构造
+    Person p(30,20,10);		第三种构造
+    cout<<"m_A = "<<p.m_A<<endl;
+    cout<<"m_B = "<<p.m_B<<endl;
+    cout<<"m_C = "<<p.m_C<<endl;
+}
+```
+
+
+
+
+
+##### 类对象作为类成员
+
+C++中的成员可以是另一个类的对象，我们称该成员为 对象成员
+
+
+
+例如：
+
+```c++
+class A{}
+class B{
+	A a;
+}
+```
+
+
+
+B类中有对象A作为成员，A为对象成员
+
+
+
+```c++
+class phone{
+public:
+	phone(string PName){
+		m_PName = pName;
+	}
+	
+	string m_PName
+};
+
+class Person{
+public:
+    
+    //Phone m_Phone = pName;	隐式转换法
+    Person(string name, string pName):m_Name(name),m_Phone(PName)
+    {
+        
+    }
+    
+	//姓名
+	string m_Nname;
+	//手机
+	Phone m_Phone;
+};
+
+void test01(){
+    Person p("张三","苹果")；
+}
+```
+
+
+
+<font color="red">其他类的对象作为本类的成员时，构造时候先构造类对象，再构造自身，析构的顺序与构造相反，先析构本类，然后在析构其他类</font>
 
