@@ -1912,3 +1912,86 @@ int main(){
 }
 ```
 
+
+
+
+
+##### this指针概念
+
+ 每一个非静态成员函数只会诞生一份函数实例，即多个同类型的对象会共用同一块代码，那么这一块代码如何区分哪个对象调用自己呢？
+
+
+
+C++通过提供特殊的对象指针，this指针来解决该问题。**this指针指向被调用的成员函数所属的对象**
+
+
+
+this指针是隐含在每一个非静态成员函数内的一种指针
+
+this指针不需要定义，直接使用即可
+
+
+
+this指针的用途：
+
+* 当形参和成员变量同名时，可以用this指针来区分
+* 在类的非静态成员函数中返回对象本身，可以使用return *this
+
+
+
+```c++
+class Person
+{
+Public:
+	Person(int age)
+	{
+		age = age;
+	}
+	
+	int age;	//与构造函数中的参数相同了，应该加以区分 可以使用m_Age
+				//m代表member
+	
+	//这里要加&符号 不加&代表以值的方式返回，会复制一份新的数据返回
+    //相当于返回的不是p2 而是p2'	引用的方式不会创建新的对象
+    Person& PersonAddAge(Person &p){
+        this->age += p.age;
+        
+        //this是指向p2的指针，而*this指向的就是p2这个对象本体
+        return *this;
+    }
+
+};				
+
+正确的写法：
+Public:
+	Person(int age){
+        //this指针指向被调用的成员函数所属的对象	这里this指向p1
+        this->age = age;
+    }
+
+//1.解决名称冲突
+void test01(){
+	Person p1(18);
+    cout<<"p1的年龄为："<<p1.age<<endl;
+}
+
+//2.返回对象本身用 *this	可以一直做追加操作
+void test02(){
+    Person p1(10);
+    
+    Person p2(10);
+    
+    //链式编程思想
+    p2.PersonAddAge(p1).PersonAddAge(p1).PersonAddAge(p1);
+    
+    cout<<"p2的年龄为："<<p2.age<<endl;
+}
+
+int main(){
+    test01();
+    
+    test02();
+}
+
+```
+
