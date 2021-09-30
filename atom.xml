@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-24T06:49:24.184Z</updated>
+  <updated>2021-09-30T05:29:47.103Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>睡眠tips</title>
+    <link href="http://example.com/2021/09/30/%E7%9D%A1%E7%9C%A0tips/"/>
+    <id>http://example.com/2021/09/30/%E7%9D%A1%E7%9C%A0tips/</id>
+    <published>2021-09-30T03:38:23.000Z</published>
+    <updated>2021-09-30T05:29:47.103Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>用舒适的姿势睡眠，<font color="red">用鼻子呼吸</font></li><li>午后（1~3点）休息半个小时或一个半小时</li><li>黄昏（5~7点）也可以适当引入（30分钟内）</li><li>白天睡不着：花30分钟放松，脱离事物片刻</li><li>每隔90分钟至少休息会，不使用电子产品</li><li>注意睡眠前后的例行程序（晚睡尤其重要）</li><li>早上起来时尽量不要看手机（至少15分钟）</li><li>温暖到凉爽的环境有助于睡眠</li><li>上床前整理东西放空大脑，上床后不多想</li><li>上床前避免剧烈运动和刺激音乐</li><li>R90方案（以90分钟的睡眠周期衡量睡眠，选择固定的起床时间来决定睡眠时间）</li><li>将睡眠放在长时间中考虑，减少压力（以星期计算）</li><li>避免连续三晚的睡眠不足，争取每周四个晚上的理想睡眠</li><li>不要周末睡懒觉</li><li>用户外光而非人工光调节</li><li>早上放慢速度，晚上少用蓝光</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;用舒适的姿势睡眠，&lt;font color=&quot;red&quot;&gt;用鼻子呼吸&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;午后（1~3点）休息半个小时或一个半小时&lt;/li&gt;
+&lt;li&gt;黄昏（5~7点）也可以适当引入（30分钟内）&lt;/li&gt;
+&lt;li&gt;白天睡不着：花30分钟放松，脱离事物片刻</summary>
+      
+    
+    
+    
+    <category term="感悟" scheme="http://example.com/categories/%E6%84%9F%E6%82%9F/"/>
+    
+    
+    <category term="生活" scheme="http://example.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络</title>
